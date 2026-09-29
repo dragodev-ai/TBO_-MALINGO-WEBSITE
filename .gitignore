@@ -1,0 +1,7 @@
+node_modules/
+.agents/
+.21st/
+dist/
+*.zip
+*.log
+_legacy_backup/
