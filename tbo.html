@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Malingo × The Brand Outreach | International 3D Digital & Media Agency</title>
-  <meta name="description" content="Malingo in strategic collaboration with The Brand Outreach. An international 3D digital marketing agency combining hyper-viral performance algorithms with 25+ years of tier-1 mainstream media authority.">
-  <meta name="keywords" content="Malingo, The Brand Outreach, TBO, Digital Marketing Agency, 3D Web Design, Social Media Agency, PR Agency, Viral Marketing, Performance Marketing">
-  <meta name="author" content="Malingo x The Brand Outreach">
-  <meta property="og:title" content="Malingo × The Brand Outreach | 3D Social Media & Growth Agency">
-  <meta property="og:description" content="Where cutting-edge performance marketing meets a quarter-century of national news agency authority.">
+  <title>Malingo × The Brand Outreach | Performance Marketing, Brand &amp; PR Agency</title>
+  <meta name="description" content="Malingo in strategic collaboration with The Brand Outreach. Full-service performance marketing, creative production, packaging design, and 25+ years of national media and PR experience.">
+  <meta name="keywords" content="Malingo, The Brand Outreach, TBO, Digital Marketing Agency, Performance Marketing, Social Media Agency, PR Agency, Brand Design, Packaging Design, Noida, Gurugram">
+  <meta name="author" content="Malingo × The Brand Outreach">
+  <meta property="og:title" content="Malingo × The Brand Outreach | Performance Marketing, Brand &amp; PR Agency">
+  <meta property="og:description" content="Performance marketing, brand design, and packaging combined with 25+ years of national media relations and corporate PR.">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts: Premium Agency Typography Suite -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
@@ -25,290 +25,301 @@
 <body>
 
   <!-- Ambient Glow Backdrops -->
-  <div class="ambient-glow glow-orange"></div>
-  <div class="ambient-glow glow-gold"></div>
-  <div class="ambient-glow glow-navy"></div>
+  <div class="ambient-glow glow-orange" aria-hidden="true"></div>
+  <div class="ambient-glow glow-gold" aria-hidden="true"></div>
+  <div class="ambient-glow glow-navy" aria-hidden="true"></div>
 
-  <!-- Interactive 3D WebGL Canvas -->
-  <canvas id="webgl-canvas"></canvas>
+  <!-- Subtle Ambient Particle Backdrop (Zero Revolving Logos, Zero Audio) -->
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
 
-  <!-- Futuristic Custom Cursor -->
-  <div id="custom-cursor" class="custom-cursor"></div>
-  <div id="cursor-follower" class="cursor-follower">
+  <!-- Desktop Pointer Cursor (Hidden on Touch Devices) -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" class="cursor-follower" aria-hidden="true">
     <span>VIEW</span>
   </div>
-
-  <!-- Top-Left Micro Light/Dark Theme Switch -->
-  <aside class="theme-switch-corner" aria-label="Theme Mode Switcher">
-    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Light and Dark Theme" title="Toggle Light / Dark Mode">
-      <span class="theme-track">
-        <span class="theme-thumb">
-          <i class="fa-solid fa-moon icon-moon"></i>
-          <i class="fa-solid fa-sun icon-sun"></i>
-        </span>
-      </span>
-      <span class="theme-label" id="theme-label">DARK</span>
-    </button>
-  </aside>
 
   <!-- Main App Wrapper -->
   <div class="app-container">
 
     <!-- Top Announcement Ribbon -->
     <header class="announcement-bar">
-      <span class="badge">Strategic Alliance</span>
-      <span><b>Malingo.in</b> in strategic collaboration with <b>The Brand Outreach</b> — Combining Viral Algorithms with 25+ Years of Legacy Authority.</span>
+      <span class="badge">Strategic Partnership</span>
+      <span><b>Malingo</b> &amp; <b>The Brand Outreach</b> — Performance marketing, brand design, and 25+ years of national media relations under one roof.</span>
     </header>
 
     <!-- Global Sticky Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary Navigation">
       <div class="navbar-inner">
         <!-- Dual Branding -->
-        <a href="#" class="nav-branding" id="nav-branding">
+        <a href="#hero" class="nav-branding" id="nav-branding" aria-label="Malingo and The Brand Outreach Home">
           <div class="logo-wrap">
-            <img src="./LOGO/malingo logo.png" alt="Malingo Logo" class="logo-img" style="height: 34px;">
+            <img src="./LOGO/malingo logo.png" alt="Malingo Logo" class="logo-img logo-malingo">
           </div>
           <div class="collab-pill">
             <span class="pulse-dot"></span>
-            <span>In Collab With</span>
+            <span class="collab-pill-text">In Collab With</span>
+            <span class="collab-pill-short" aria-hidden="true">×</span>
           </div>
           <div class="logo-wrap">
-            <img src="./LOGO/TBO.png" alt="The Brand Outreach Logo" class="logo-img" style="height: 40px;">
+            <img src="./LOGO/TBO.png" alt="The Brand Outreach Logo" class="logo-img logo-tbo">
           </div>
         </a>
 
-        <!-- Navigation Links -->
+        <!-- Desktop Navigation Links -->
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link">The Alliance</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#comparison" class="nav-link">Why We Win</a></li>
-          <li><a href="#titans" class="nav-link">Our Titans</a></li>
-          <li><a href="#data" class="nav-link">Data & Proof</a></li>
+          <li><a href="#comparison" class="nav-link">Why Us</a></li>
+          <li><a href="#titans" class="nav-link">Our Team</a></li>
+          <li><a href="#data" class="nav-link">Results</a></li>
           <li><a href="#work" class="nav-link">Case Studies</a></li>
         </ul>
 
-        <!-- Nav Right CTA & Audio Toggle -->
+        <!-- Nav Actions: Theme Toggle, CTA, Mobile Drawer Button -->
         <div class="nav-actions">
-          <button id="audio-toggle-btn" class="audio-toggle" title="Toggle 3D Audio Experience" aria-label="Toggle 3D Audio">
-            🔇
+          <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Light and Dark Theme" title="Toggle Light / Dark Mode">
+            <span class="theme-track">
+              <span class="theme-thumb">
+                <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+                <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+              </span>
+            </span>
+            <span class="theme-label" id="theme-label">DARK</span>
           </button>
-          <a href="#contact" class="btn-cta" id="nav-cta-btn">
-            <span>Book Growth Call</span>
-            <i class="fa-solid fa-arrow-right"></i>
+
+          <a href="#contact" class="btn-cta nav-desktop-cta" id="nav-cta-btn">
+            <span>Book a Call</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+            <i class="fa-solid fa-bars icon-bars" aria-hidden="true"></i>
+            <i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile & Tablet Navigation Drawer -->
+      <div id="mobile-nav-drawer" class="mobile-nav-drawer" hidden>
+        <ul class="mobile-nav-links">
+          <li><a href="#about" class="mobile-nav-link">About the Partnership</a></li>
+          <li><a href="#services" class="mobile-nav-link">Services &amp; Capabilities</a></li>
+          <li><a href="#comparison" class="mobile-nav-link">Why Choose Us</a></li>
+          <li><a href="#titans" class="mobile-nav-link">Leadership Team</a></li>
+          <li><a href="#data" class="mobile-nav-link">Campaign Results</a></li>
+          <li><a href="#work" class="mobile-nav-link">Case Studies &amp; Clients</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+          <a href="#contact" class="btn-cta mobile-nav-cta">
+            <span>Schedule a Growth Audit</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </nav>
 
     <!-- ======================================================================
-         HERO SECTION: 3D KINETIC VIEWPORT
+         HERO SECTION
          ====================================================================== -->
     <section class="section hero-section" id="hero">
       <div class="hero-tag">
-        <i class="fa-solid fa-bolt" style="color: var(--malingo-orange);"></i>
-        <span>Two Industry Titans. One Unrivaled Growth Engine.</span>
+        <i class="fa-solid fa-sparkles" style="color: var(--malingo-orange);" aria-hidden="true"></i>
+        <span>Performance Marketing · Brand Design · National PR</span>
       </div>
 
       <h1 class="hero-title">
-        Scaling Brands Into <br>
-        <span class="gradient-text-fusion">Global Market Icons</span>
+        Building Brands People <br>
+        <span class="gradient-text-fusion">Notice, Trust &amp; Buy From</span>
       </h1>
 
       <p class="hero-subtitle">
-        What happens when <span class="highlight-malingo">Malingo’s</span> hyper-viral performance algorithms join forces with <span class="highlight-tbo">The Brand Outreach’s</span> 25-year legacy of mainstream media clout? You stop competing for attention — <span class="highlight-punchline">and start owning the industry.</span>
+        When <span class="highlight-malingo">Malingo’s</span> performance marketing, video production, and packaging design come together with <span class="highlight-tbo">The Brand Outreach’s</span> 25+ years in national media and PR, your brand gets both measurable demand and <span class="highlight-punchline">lasting market credibility.</span>
       </p>
 
       <div class="hero-cta-group">
         <div class="offer-btn-wrapper">
           <div class="btn-container">
-            <div class="btn-drawer transition-top">🔥 Limited Q4 Retainers</div>
-            <div class="btn-drawer transition-bottom">...Only 3 Slots Left</div>
+            <div class="btn-drawer transition-top">Direct Senior Partner Review</div>
+            <div class="btn-drawer transition-bottom">Response Within 15 Minutes</div>
             <a href="#contact" class="btn">
-              <i class="fa-brands fa-whatsapp" style="color: #fff; font-size: 1.15rem;"></i>
-              <span class="btn-text">Schedule Free Growth Audit</span>
+              <i class="fa-solid fa-calendar-check" style="color: #fff; font-size: 1.05rem;" aria-hidden="true"></i>
+              <span class="btn-text">Schedule a Growth Audit</span>
             </a>
-            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
               <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
             </svg>
-            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
               <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
             </svg>
-            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
               <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
             </svg>
-            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+            <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
               <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
             </svg>
           </div>
         </div>
-        <a href="#titans" class="btn-secondary" style="padding: 16px 32px; font-size: 1.05rem;">
-          <i class="fa-solid fa-users"></i>
-          <span>Meet Our 8 Leadership Titans</span>
+        <a href="#work" class="btn-secondary hero-secondary-btn">
+          <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+          <span>Explore Case Studies</span>
         </a>
       </div>
 
-      <!-- 3D Interactive Social Media Deck -->
+      <!-- Core Channels & Media Practice Deck -->
       <div class="social-3d-orbit-showcase tilt-3d" id="social-orbit">
         <div class="orbit-label">
-          <span>⚡ Interactive 3D Social Media Dominance Engine • Click to Engage</span>
+          <span>Core Channels &amp; Media Practice</span>
         </div>
         <div class="social-cards-3d-grid">
-          <!-- Instagram -->
-          <div class="social-3d-cube" onclick="window.open('https://www.instagram.com/malingomedia', '_blank')">
+          <a href="https://www.instagram.com/malingomedia" target="_blank" rel="noopener noreferrer" class="social-3d-cube">
             <div class="social-icon-wrapper icon-ig">
-              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             </div>
             <span class="social-name">Instagram</span>
-            <span class="social-stat">Viral Reels & Aesthetics</span>
-          </div>
+            <span class="social-stat">Reels, Content &amp; Feed</span>
+          </a>
 
-          <!-- LinkedIn -->
-          <div class="social-3d-cube" onclick="window.open('https://www.linkedin.com/company/malingo-media-group/', '_blank')">
+          <a href="https://www.linkedin.com/company/malingo-media-group/" target="_blank" rel="noopener noreferrer" class="social-3d-cube">
             <div class="social-icon-wrapper icon-li">
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </div>
             <span class="social-name">LinkedIn</span>
-            <span class="social-stat">B2B Authority & Leads</span>
-          </div>
+            <span class="social-stat">B2B Presence &amp; Leads</span>
+          </a>
 
-          <!-- YouTube -->
-          <div class="social-3d-cube" onclick="location.href='#services'">
+          <a href="#services" class="social-3d-cube">
             <div class="social-icon-wrapper icon-yt">
-              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
             </div>
             <span class="social-name">YouTube</span>
-            <span class="social-stat">High-Retention Video</span>
-          </div>
+            <span class="social-stat">Short &amp; Long-Form Video</span>
+          </a>
 
-          <!-- Meta Ads -->
-          <div class="social-3d-cube" onclick="window.open('https://www.facebook.com/malingomedia', '_blank')">
+          <a href="https://www.facebook.com/malingomedia" target="_blank" rel="noopener noreferrer" class="social-3d-cube">
             <div class="social-icon-wrapper icon-fb">
-              <i class="fa-brands fa-meta"></i>
+              <i class="fa-brands fa-meta" aria-hidden="true"></i>
             </div>
             <span class="social-name">Meta Ads</span>
-            <span class="social-stat">4.8x Average ROAS</span>
-          </div>
+            <span class="social-stat">Paid Acquisition &amp; Scale</span>
+          </a>
 
-          <!-- WhatsApp Direct -->
-          <div class="social-3d-cube" onclick="window.open('https://wa.me/message/EWQ6YJE2UQUHA1', '_blank')">
+          <a href="https://wa.me/message/EWQ6YJE2UQUHA1" target="_blank" rel="noopener noreferrer" class="social-3d-cube">
             <div class="social-icon-wrapper icon-wa">
-              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             </div>
             <span class="social-name">WhatsApp</span>
-            <span class="social-stat">VIP Instant Access</span>
-          </div>
+            <span class="social-stat">Direct Partner Desk</span>
+          </a>
 
-          <!-- X / Twitter PR -->
-          <div class="social-3d-cube" onclick="location.href='#services'">
+          <a href="#services" class="social-3d-cube">
             <div class="social-icon-wrapper icon-x">
-              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
             </div>
             <span class="social-name">X (Twitter)</span>
-            <span class="social-stat">Press & Viral Moments</span>
-          </div>
+            <span class="social-stat">PR &amp; Newsroom Reach</span>
+          </a>
         </div>
       </div>
 
-      <!-- Hero Real Stats Ribbon with Portfolio Data -->
+      <!-- Key Metrics Ribbon -->
       <div class="hero-stats-ribbon">
         <div class="stat-chip tilt-3d">
           <div class="stat-num">
             <span class="counter-val" data-target="50">0</span><span>+</span>
           </div>
-          <div class="stat-label">Clients Globally & Publicly Listed Enterprises</div>
+          <div class="stat-label">Brands &amp; Listed Enterprises Partnered With</div>
         </div>
 
         <div class="stat-chip tilt-3d">
           <div class="stat-num">
             <span>₹</span><span class="counter-val" data-target="1700">0</span><span>Cr+</span>
           </div>
-          <div class="stat-label">Client Market Cap (e.g. Mufin Green Finance)</div>
+          <div class="stat-label">Client Market Cap (incl. Mufin Green Finance)</div>
         </div>
 
         <div class="stat-chip tilt-3d">
           <div class="stat-num">
             <span class="counter-val" data-target="500">0</span><span>M+</span>
           </div>
-          <div class="stat-label">Organic Video Views Across Meta, YouTube & TikTok</div>
+          <div class="stat-label">Organic &amp; Paid Video Views Delivered</div>
         </div>
 
         <div class="stat-chip tilt-3d">
           <div class="stat-num">
             <span class="counter-val" data-target="25">0</span><span>+</span>
           </div>
-          <div class="stat-label">Years of Mainstream Media & News Clout (TBO)</div>
+          <div class="stat-label">Years of National Media &amp; PR Experience (TBO)</div>
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         MARQUEE: 50+ TRUSTED GLOBAL BRANDS & ENTERPRISE INTEGRATIONS
+         MARQUEE: BRANDS WE HAVE WORKED WITH
          ====================================================================== -->
-    <section class="clients-marquee-section">
-      <div style="text-align: center; margin-bottom: 20px;">
-        <span class="section-tag" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); font-size: 0.75rem;">
-          <i class="fa-solid fa-building"></i> Over 50+ Leading Brands, Publicly Listed Giants & Unicorns Trust Us
+    <section class="clients-marquee-section" aria-label="Client Brands Showcase">
+      <div class="marquee-heading-wrap">
+        <span class="section-tag section-tag-subtle">
+          <i class="fa-solid fa-building" aria-hidden="true"></i> Trusted by 50+ Growing Brands &amp; Listed Enterprises
         </span>
       </div>
       <div class="marquee-track">
-        <!-- Set 1: Real Client Logos -->
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/paytm.png" alt="Paytm" class="marquee-logo-img"></div> <span>Paytm</span> <span class="client-tag">Fintech Giant</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/mufin.png" alt="Mufin" class="marquee-logo-img"></div> <span>Mufin Green Finance</span> <span class="client-tag">₹1700+ Cr Listed</span></div>
+        <!-- Set 1 -->
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/paytm.png" alt="Paytm" class="marquee-logo-img"></div> <span>Paytm</span> <span class="client-tag">Fintech</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/mufin.png" alt="Mufin Green Finance" class="marquee-logo-img"></div> <span>Mufin Green Finance</span> <span class="client-tag">₹1700+ Cr Listed</span></div>
         <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/amway.png" alt="Amway" class="marquee-logo-img"></div> <span>Amway</span> <span class="client-tag">Global FMCG</span></div>
         <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/bca.png" alt="Bharat Certis" class="marquee-logo-img"></div> <span>Bharat Certis</span> <span class="client-tag">AgriScience</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/starfox_large.png" alt="Starfox" class="marquee-logo-img"></div> <span>Starfox Fashion</span> <span class="client-tag">100K+ Customers</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/intrend_large.png" alt="Intrend" class="marquee-logo-img"></div> <span>Intrend Colours</span> <span class="client-tag">Cosmetics</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/colourvalley_large.png" alt="Colour Valley" class="marquee-logo-img"></div> <span>Colour Valley</span> <span class="client-tag">Paints & Wallcare</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/malee_clean.png" alt="Malee" class="marquee-logo-img"></div> <span>Malee</span> <span class="client-tag">Gardening Tech</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/starfox_large.png" alt="Starfox Fashion" class="marquee-logo-img"></div> <span>Starfox Fashion</span> <span class="client-tag">100K+ Customers</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/intrend_large.png" alt="Intrend Colours" class="marquee-logo-img"></div> <span>Intrend Colours</span> <span class="client-tag">Cosmetics</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/colourvalley_large.png" alt="Colour Valley" class="marquee-logo-img"></div> <span>Colour Valley</span> <span class="client-tag">Paints &amp; Wallcare</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/malee_clean.png" alt="Malee" class="marquee-logo-img"></div> <span>Malee</span> <span class="client-tag">Gardening</span></div>
         <div class="client-pill-badge"><div class="marquee-logo-pod dark-pod"><img src="./CLIENTS/logos/lytage_large.png" alt="Lytage" class="marquee-logo-img"></div> <span>Lytage</span> <span class="client-tag">Electronics</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/go_desi_logo.png" alt="Go Desi" class="marquee-logo-img"></div> <span>Go Desi</span> <span class="client-tag">Viral Candy</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/go_desi_logo.png" alt="Go Desi" class="marquee-logo-img"></div> <span>Go Desi</span> <span class="client-tag">Food &amp; Snacks</span></div>
         <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/jovees_logo.png" alt="Jovees" class="marquee-logo-img"></div> <span>Jovees Premium</span> <span class="client-tag">Skincare</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/bsdu.png" alt="BSDU" class="marquee-logo-img"></div> <span>BSDU University</span> <span class="client-tag">Skill Education</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/rajesh.png" alt="Rajesh" class="marquee-logo-img"></div> <span>Rajesh Spices</span> <span class="client-tag">FMCG Giant</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/neofit.png" alt="Neofit" class="marquee-logo-img"></div> <span>Neofit Active</span> <span class="client-tag">Health Tech</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/spectra.png" alt="Spectra" class="marquee-logo-img"></div> <span>Spectra Interiorz</span> <span class="client-tag">Architecture</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/bsdu.png" alt="BSDU University" class="marquee-logo-img"></div> <span>BSDU University</span> <span class="client-tag">Higher Education</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/rajesh.png" alt="Rajesh Spices" class="marquee-logo-img"></div> <span>Rajesh Spices</span> <span class="client-tag">FMCG &amp; Spices</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/neofit.png" alt="Neofit" class="marquee-logo-img"></div> <span>Neofit</span> <span class="client-tag">Nutraceuticals</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/spectra.png" alt="Spectra Interiorz" class="marquee-logo-img"></div> <span>Spectra Interiorz</span> <span class="client-tag">Architecture</span></div>
         <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/teledu.png" alt="Teledu" class="marquee-logo-img"></div> <span>Teledu</span> <span class="client-tag">Telecom Media</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/uomo.png" alt="Uomo" class="marquee-logo-img"></div> <span>Uomo Luxury</span> <span class="client-tag">Apparel</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/krishaj.png" alt="Krishaj" class="marquee-logo-img"></div> <span>Krishaj</span> <span class="client-tag">CropCare</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/uomo.png" alt="Uomo" class="marquee-logo-img"></div> <span>Uomo</span> <span class="client-tag">Apparel</span></div>
+        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/krishaj.png" alt="Krishaj" class="marquee-logo-img"></div> <span>Krishaj</span> <span class="client-tag">Crop Care</span></div>
 
-        <!-- Duplicated Set for Infinite Seamless Loop -->
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/paytm.png" alt="Paytm" class="marquee-logo-img"></div> <span>Paytm</span> <span class="client-tag">Fintech Giant</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/mufin.png" alt="Mufin" class="marquee-logo-img"></div> <span>Mufin Green Finance</span> <span class="client-tag">₹1700+ Cr Listed</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/amway.png" alt="Amway" class="marquee-logo-img"></div> <span>Amway</span> <span class="client-tag">Global FMCG</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/bca.png" alt="Bharat Certis" class="marquee-logo-img"></div> <span>Bharat Certis</span> <span class="client-tag">AgriScience</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/starfox_large.png" alt="Starfox" class="marquee-logo-img"></div> <span>Starfox Fashion</span> <span class="client-tag">100K+ Customers</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/intrend_large.png" alt="Intrend" class="marquee-logo-img"></div> <span>Intrend Colours</span> <span class="client-tag">Cosmetics</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/colourvalley_large.png" alt="Colour Valley" class="marquee-logo-img"></div> <span>Colour Valley</span> <span class="client-tag">Paints & Wallcare</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/malee_clean.png" alt="Malee" class="marquee-logo-img"></div> <span>Malee</span> <span class="client-tag">Gardening Tech</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod dark-pod"><img src="./CLIENTS/logos/lytage_large.png" alt="Lytage" class="marquee-logo-img"></div> <span>Lytage</span> <span class="client-tag">Electronics</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/go_desi_logo.png" alt="Go Desi" class="marquee-logo-img"></div> <span>Go Desi</span> <span class="client-tag">Viral Candy</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/jovees_logo.png" alt="Jovees" class="marquee-logo-img"></div> <span>Jovees Premium</span> <span class="client-tag">Skincare</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/bsdu.png" alt="BSDU" class="marquee-logo-img"></div> <span>BSDU University</span> <span class="client-tag">Skill Education</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/rajesh.png" alt="Rajesh" class="marquee-logo-img"></div> <span>Rajesh Spices</span> <span class="client-tag">FMCG Giant</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/neofit.png" alt="Neofit" class="marquee-logo-img"></div> <span>Neofit Active</span> <span class="client-tag">Health Tech</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/spectra.png" alt="Spectra" class="marquee-logo-img"></div> <span>Spectra Interiorz</span> <span class="client-tag">Architecture</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/teledu.png" alt="Teledu" class="marquee-logo-img"></div> <span>Teledu</span> <span class="client-tag">Telecom Media</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/uomo.png" alt="Uomo" class="marquee-logo-img"></div> <span>Uomo Luxury</span> <span class="client-tag">Apparel</span></div>
-        <div class="client-pill-badge"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/krishaj.png" alt="Krishaj" class="marquee-logo-img"></div> <span>Krishaj</span> <span class="client-tag">CropCare</span></div>
+        <!-- Set 2 (Seamless Loop) -->
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/paytm.png" alt="" class="marquee-logo-img"></div> <span>Paytm</span> <span class="client-tag">Fintech</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/mufin.png" alt="" class="marquee-logo-img"></div> <span>Mufin Green Finance</span> <span class="client-tag">₹1700+ Cr Listed</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/amway.png" alt="" class="marquee-logo-img"></div> <span>Amway</span> <span class="client-tag">Global FMCG</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/bca.png" alt="" class="marquee-logo-img"></div> <span>Bharat Certis</span> <span class="client-tag">AgriScience</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/starfox_large.png" alt="" class="marquee-logo-img"></div> <span>Starfox Fashion</span> <span class="client-tag">100K+ Customers</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/intrend_large.png" alt="" class="marquee-logo-img"></div> <span>Intrend Colours</span> <span class="client-tag">Cosmetics</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/colourvalley_large.png" alt="" class="marquee-logo-img"></div> <span>Colour Valley</span> <span class="client-tag">Paints &amp; Wallcare</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/malee_clean.png" alt="" class="marquee-logo-img"></div> <span>Malee</span> <span class="client-tag">Gardening</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod dark-pod"><img src="./CLIENTS/logos/lytage_large.png" alt="" class="marquee-logo-img"></div> <span>Lytage</span> <span class="client-tag">Electronics</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/go_desi_logo.png" alt="" class="marquee-logo-img"></div> <span>Go Desi</span> <span class="client-tag">Food &amp; Snacks</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/jovees_logo.png" alt="" class="marquee-logo-img"></div> <span>Jovees Premium</span> <span class="client-tag">Skincare</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/bsdu.png" alt="" class="marquee-logo-img"></div> <span>BSDU University</span> <span class="client-tag">Higher Education</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/rajesh.png" alt="" class="marquee-logo-img"></div> <span>Rajesh Spices</span> <span class="client-tag">FMCG &amp; Spices</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/neofit.png" alt="" class="marquee-logo-img"></div> <span>Neofit</span> <span class="client-tag">Nutraceuticals</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/spectra.png" alt="" class="marquee-logo-img"></div> <span>Spectra Interiorz</span> <span class="client-tag">Architecture</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/teledu.png" alt="" class="marquee-logo-img"></div> <span>Teledu</span> <span class="client-tag">Telecom Media</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/uomo.png" alt="" class="marquee-logo-img"></div> <span>Uomo</span> <span class="client-tag">Apparel</span></div>
+        <div class="client-pill-badge" aria-hidden="true"><div class="marquee-logo-pod"><img src="./CLIENTS/logos/krishaj.png" alt="" class="marquee-logo-img"></div> <span>Krishaj</span> <span class="client-tag">Crop Care</span></div>
       </div>
     </section>
 
-
     <!-- ======================================================================
-         SECTION: THE STRATEGIC ALLIANCE (MALINGO x TBO)
+         SECTION: ABOUT THE PARTNERSHIP (MALINGO x TBO)
          ====================================================================== -->
     <section class="section" id="about">
       <div class="section-header">
         <div class="section-tag">
-          <i class="fa-solid fa-handshake"></i>
-          <span>The Power of Alliance</span>
+          <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+          <span>About the Partnership</span>
         </div>
         <h2 class="section-title">
           Why Malingo × The Brand Outreach <br>
-          <span class="gradient-text-fusion">Leaves Traditional Agencies in the Dust</span>
+          <span class="gradient-text-fusion">Works Better Together</span>
         </h2>
         <p class="section-desc">
-          Most marketing agencies offer only one half of the equation: either trendy social posts with zero enterprise credibility, or outdated PR firms with no grasp of modern viral algorithms. We united both worlds into a single, unstoppable juggernaut.
+          Most agencies cover only half the picture — digital teams without corporate credibility, or traditional PR firms disconnected from modern performance channels. Together, we align strategy, creative production, paid acquisition, and national media under one senior team.
         </p>
       </div>
 
@@ -318,34 +329,34 @@
           <div class="collab-card-logo-wrap">
             <img src="./LOGO/malingo logo.png" alt="Malingo Agency" class="collab-card-logo">
           </div>
-          <h3 class="collab-card-title">The Next-Gen Performance Engine</h3>
-          <p style="color: var(--text-body); font-size: 0.95rem;">
-            Founded by <b>Kushagra</b>, Malingo represents the vanguard of digital scaling: algorithmic testing, viral retention frameworks, and paid media precision engineered to generate revenue on demand.
+          <h3 class="collab-card-title">Digital Growth, Creative &amp; Packaging</h3>
+          <p class="collab-card-copy">
+            Founded by <b>Kushagra</b>, Malingo leads performance advertising, social media strategy, short-form video production, brand identity, and retail packaging designed around measurable commercial outcomes.
           </p>
           <ul class="collab-features">
             <li class="collab-feature-item">
-              <span class="collab-feature-icon">✓</span>
-              <span>Proprietary short-form retention architectures (Reels, TikTok, Shorts).</span>
+              <span class="collab-feature-icon" aria-hidden="true">✓</span>
+              <span>Short-form video and social content built for watch time and engagement.</span>
             </li>
             <li class="collab-feature-item">
-              <span class="collab-feature-icon">✓</span>
-              <span>Predictive data-backed paid advertising scaling up to 8-figure monthly budgets.</span>
+              <span class="collab-feature-icon" aria-hidden="true">✓</span>
+              <span>Paid advertising across Meta, Google, and YouTube managed to CPL and ROAS.</span>
             </li>
             <li class="collab-feature-item">
-              <span class="collab-feature-icon">✓</span>
-              <span>Hyper-targeted creative iteration and high-converting graphic systems.</span>
+              <span class="collab-feature-icon" aria-hidden="true">✓</span>
+              <span>End-to-end brand systems, retail packaging, and conversion-focused creatives.</span>
             </li>
           </ul>
         </div>
 
-        <!-- Center Reactor -->
+        <!-- Center Core -->
         <div class="collab-center-core">
           <div class="core-reactor">
             <div class="reactor-inner">
-              <i class="fa-solid fa-infinity"></i>
+              <i class="fa-solid fa-infinity" aria-hidden="true"></i>
             </div>
           </div>
-          <span class="core-text">In Strategic Collaboration</span>
+          <span class="core-text">Strategic Partnership</span>
         </div>
 
         <!-- The Brand Outreach Card -->
@@ -353,22 +364,22 @@
           <div class="collab-card-logo-wrap">
             <img src="./LOGO/TBO.png" alt="The Brand Outreach" class="collab-card-logo">
           </div>
-          <h3 class="collab-card-title">The Institutional Media Authority</h3>
-          <p style="color: var(--text-body); font-size: 0.95rem;">
-            Helmed by <b>Shikha Ma'am</b> and <b>Amit Sir</b>, The Brand Outreach commands 25+ years of senior news agency leadership, national media relations, and enterprise strategic communications.
+          <h3 class="collab-card-title">National PR &amp; Corporate Communications</h3>
+          <p class="collab-card-copy">
+            Led by <b>Shikha Ma'am</b> and <b>Amit Sir</b>, The Brand Outreach brings over 25 years of experience in national news agencies, mainstream media relations, and corporate communications.
           </p>
           <ul class="collab-features">
             <li class="collab-feature-item">
-              <span class="collab-feature-icon">✓</span>
-              <span>Direct tier-1 access to national television networks, press, and print syndicates.</span>
+              <span class="collab-feature-icon" aria-hidden="true">✓</span>
+              <span>Direct relationships across national television, print publications, and digital newsrooms.</span>
             </li>
             <li class="collab-feature-item">
-              <span class="collab-feature-icon">✓</span>
-              <span>Enterprise-grade reputation management, crisis PR, and corporate brand positioning.</span>
+              <span class="collab-feature-icon" aria-hidden="true">✓</span>
+              <span>Corporate reputation management, executive profiling, and crisis communications.</span>
             </li>
             <li class="collab-feature-item">
-              <span class="collab-feature-icon">✓</span>
-              <span>Quarter-century network of high-level industrial, political, and corporate leaders.</span>
+              <span class="collab-feature-icon" aria-hidden="true">✓</span>
+              <span>Quarter-century network spanning corporate, institutional, and regional markets.</span>
             </li>
           </ul>
         </div>
@@ -376,19 +387,19 @@
     </section>
 
     <!-- ======================================================================
-         SECTION: WHAT WE DO (OUR 6 CORE SUPERPOWERS)
+         SECTION: SERVICES & 360° CAPABILITIES
          ====================================================================== -->
     <section class="section services-section-container" id="services">
       <div class="section-header" style="position: relative; z-index: 2;">
         <div class="section-tag gold">
-          <i class="fa-solid fa-shapes"></i>
-          <span>Full-Spectrum Capabilities</span>
+          <i class="fa-solid fa-shapes" aria-hidden="true"></i>
+          <span>Our Capabilities</span>
         </div>
         <h2 class="section-title">
-          What We Do: <span class="gradient-text-malingo">Comprehensive Domination</span>
+          What We Do: <span class="gradient-text-malingo">Full-Service Brand &amp; Growth</span>
         </h2>
         <p class="section-desc">
-          Every deliverable is engineered with precision, backed by hard performance data, and designed to generate measurable enterprise ROI.
+          From paid acquisition and video production to retail packaging and national press coverage, every deliverable is built around clear commercial goals.
         </p>
       </div>
 
@@ -396,148 +407,147 @@
         <!-- Service 1 -->
         <div class="service-card tilt-3d">
           <div class="service-icon-box">
-            <i class="fa-solid fa-chart-line"></i>
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
           </div>
           <h3 class="service-title">Performance Paid Advertising</h3>
           <p class="service-desc">
-            Multi-platform campaign architectures across Meta, Google, LinkedIn, and TikTok. We design full-funnel systems that turn ad spend into predictable revenue with industry-beating ROAS.
+            Multi-platform campaigns across Meta, Google, LinkedIn, and YouTube structured to convert ad spend into qualified leads, sales, and controlled acquisition costs.
           </p>
           <ul class="service-bullets">
-            <li class="service-bullet">Custom conversion tracking & server-side CAPI integration</li>
-            <li class="service-bullet">Dynamic creative testing with weekly cohort analysis</li>
-            <li class="service-bullet">Aggressive retargeting engines & lookalike scaling</li>
+            <li class="service-bullet">Conversion tracking &amp; server-side CAPI setup</li>
+            <li class="service-bullet">Structured creative testing with weekly cohort reviews</li>
+            <li class="service-bullet">Full-funnel retargeting &amp; lookalike audience scaling</li>
           </ul>
         </div>
 
         <!-- Service 2 -->
         <div class="service-card tilt-3d">
-          <div class="service-icon-box" style="background: rgba(245, 166, 35, 0.15); color: var(--tbo-gold);">
-            <i class="fa-solid fa-video"></i>
+          <div class="service-icon-box service-icon-gold">
+            <i class="fa-solid fa-video" aria-hidden="true"></i>
           </div>
-          <h3 class="service-title">High-Retention Viral Video Editing</h3>
+          <h3 class="service-title">Short-Form &amp; Brand Video Production</h3>
           <p class="service-desc">
-            Directed by 8-year post-production veteran <b>Dev</b>, our video suite produces cinematic reels, TikToks, and YouTube Shorts engineered with sub-second hook psychology and dynamic pacing.
+            Led by <b>Dev</b> (8 years in post-production), our video team produces reels, performance ad edits, and YouTube Shorts structured around strong hooks and viewer retention.
           </p>
           <ul class="service-bullets">
-            <li class="service-bullet">3D kinetic typography and custom sound-design mixing</li>
-            <li class="service-bullet">Thumbnail CTR optimization and narrative retention curves</li>
-            <li class="service-bullet">Tested on 500M+ views for maximum algorithmic reach</li>
+            <li class="service-bullet">Motion graphics, pacing &amp; clean audio post-production</li>
+            <li class="service-bullet">Thumbnail and opening-hook testing for click-through</li>
+            <li class="service-bullet">Consistent output across social, ads &amp; brand launches</li>
           </ul>
         </div>
 
         <!-- Service 3 -->
         <div class="service-card tilt-3d">
-          <div class="service-icon-box" style="background: rgba(59, 130, 246, 0.15); color: #3B82F6;">
-            <i class="fa-solid fa-newspaper"></i>
+          <div class="service-icon-box service-icon-blue">
+            <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
           </div>
-          <h3 class="service-title">25-Year PR & Newsroom Outreach</h3>
+          <h3 class="service-title">PR &amp; National Media Outreach</h3>
           <p class="service-desc">
-            Leveraging <b>Shikha Ma'am & Amit Sir's</b> 25-year news agency legacy, we place your brand directly inside prestigious national publications, television syndicates, and digital media portals.
+            Drawing on <b>Shikha Ma'am &amp; Amit Sir's</b> 25+ years in national newsrooms, we place brands across credible television networks, print publications, and leading digital media portals.
           </p>
           <ul class="service-bullets">
-            <li class="service-bullet">Guaranteed tier-1 editorial features & founder profiles</li>
-            <li class="service-bullet">High-stakes corporate reputation & crisis communications</li>
-            <li class="service-bullet">Press release drafting with national news agency standards</li>
+            <li class="service-bullet">Editorial features, interviews &amp; founder profiles</li>
+            <li class="service-bullet">Corporate reputation &amp; crisis communications support</li>
+            <li class="service-bullet">Newsroom-grade press releases &amp; media briefings</li>
           </ul>
         </div>
 
         <!-- Service 4 -->
         <div class="service-card tilt-3d">
-          <div class="service-icon-box" style="background: rgba(226, 109, 92, 0.15); color: var(--tbo-coral);">
-            <i class="fa-solid fa-palette"></i>
+          <div class="service-icon-box service-icon-coral">
+            <i class="fa-solid fa-palette" aria-hidden="true"></i>
           </div>
-          <h3 class="service-title">3D Brand Identity & Visual Systems</h3>
+          <h3 class="service-title">Brand Identity, Graphics &amp; Packaging</h3>
           <p class="service-desc">
-            Led by <b>Jeetu</b> (8+ years experience), we craft visual identities, 3D brand assets, packaging, and high-CTR static ad graphics that captivate the eye and convert cold traffic immediately.
+            Led by <b>Jeetu</b> (8+ years of design experience), we craft cohesive brand identities, retail packaging systems, and performance ad creatives built to stand out on shelves and feeds.
           </p>
           <ul class="service-bullets">
-            <li class="service-bullet">Complete corporate design kits and design systems</li>
-            <li class="service-bullet">High-converting social ad creatives with 5%+ CTR</li>
-            <li class="service-bullet">Spatial 3D assets, iconography, and motion guidelines</li>
+            <li class="service-bullet">Complete logo systems &amp; repeatable brand guidelines</li>
+            <li class="service-bullet">Retail &amp; D2C packaging engineered for shelf clarity</li>
+            <li class="service-bullet">Static ad suites &amp; social visual design languages</li>
           </ul>
         </div>
 
         <!-- Service 5 -->
         <div class="service-card tilt-3d">
-          <div class="service-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">
-            <i class="fa-solid fa-briefcase"></i>
+          <div class="service-icon-box service-icon-green">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
           </div>
-          <h3 class="service-title">Enterprise Sales Strategy & Alliances</h3>
+          <h3 class="service-title">Enterprise Sales &amp; B2B Partnerships</h3>
           <p class="service-desc">
-            Spearheaded by 20-year sales leader <b>Madhur</b> (currently handling prestigious partnerships with Levanto Green), we design high-ticket sales pipelines, outbound frameworks, and client closing scripts.
+            Spearheaded by 20-year sales leader <b>Madhur</b> (managing key enterprise accounts including Livanto Green Infra), we align marketing pipelines directly with commercial deal closure.
           </p>
           <ul class="service-bullets">
-            <li class="service-bullet">Strategic B2B outbound sequences and lead qualification</li>
-            <li class="service-bullet">Enterprise partner deal structuring & contract closing</li>
-            <li class="service-bullet">Commercial funnel alignment with marketing campaigns</li>
+            <li class="service-bullet">B2B outbound strategy &amp; lead qualification frameworks</li>
+            <li class="service-bullet">Enterprise partner outreach &amp; commercial structuring</li>
+            <li class="service-bullet">Sales-ready collateral aligned with active campaigns</li>
           </ul>
         </div>
 
         <!-- Service 6 -->
         <div class="service-card tilt-3d">
-          <div class="service-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #A855F7;">
-            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <div class="service-icon-box service-icon-purple">
+            <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
           </div>
-          <h3 class="service-title">Operations & Growth Orchestration</h3>
+          <h3 class="service-title">Client Operations &amp; Growth Strategy</h3>
           <p class="service-desc">
-            Driven by <b>Aryaman</b> (Head of Operations & POC) and <b>Mayank</b> (Growth Strategist), we provide 24/7 dedicated client success handling, real-time analytics reporting, and rapid campaign iteration.
+            Driven by <b>Aryaman</b> (Head of Operations &amp; Client POC) and <b>Mayank</b> (Senior Sales &amp; Growth Strategist), keeping every brief moving with transparent reporting and direct senior accountability.
           </p>
           <ul class="service-bullets">
-            <li class="service-bullet">Dedicated VIP point-of-contact (no ticketing queues)</li>
-            <li class="service-bullet">Weekly bi-directional reporting with actionable insights</li>
-            <li class="service-bullet">Rapid 48-hour turnarounds on new campaign iterations</li>
+            <li class="service-bullet">Dedicated senior point of contact — no ticket queues</li>
+            <li class="service-bullet">Weekly performance reviews tied to real KPIs</li>
+            <li class="service-bullet">Fast campaign turnarounds across design, media &amp; PR</li>
           </ul>
         </div>
       </div>
 
-      <!-- Full 15 360-Degree Services from Malingo Portfolio Deck -->
+      <!-- Full 15 Services Matrix -->
       <div class="ecosystem-360-card">
         <div class="ecosystem-header">
-          <span class="section-tag gold" style="font-size: 0.78rem;">
-            <i class="fa-solid fa-arrows-spin"></i> Complete 360° Execution Ecosystem
+          <span class="section-tag gold">
+            <i class="fa-solid fa-arrows-spin" aria-hidden="true"></i> 360° Capabilities
           </span>
-          <h3 class="ecosystem-title">We Turn Ideas into Reality</h3>
+          <h3 class="ecosystem-title">Everything Your Brand Needs Under One Roof</h3>
           <p class="ecosystem-desc">
-            We are a 360 marketing agency that takes care of all your needs — from offline outdoor store branding to viral social media algorithms and tier-1 national press.
+            From outdoor billboards and retail packaging to social media campaigns, paid performance, and national press coverage.
           </p>
         </div>
 
         <div class="services-15-grid">
           <div class="service-15-item"><span class="service-15-num">01</span><span class="service-15-name">Brand Activation Services</span></div>
-          <div class="service-15-item"><span class="service-15-num">02</span><span class="service-15-name">Lead Generation Architecture</span></div>
-          <div class="service-15-item"><span class="service-15-num">03</span><span class="service-15-name">Creative Designing Services</span></div>
-          <div class="service-15-item"><span class="service-15-num">04</span><span class="service-15-name">Event Promotions & Management</span></div>
-          <div class="service-15-item"><span class="service-15-num">05</span><span class="service-15-name">PR & Media Outreach (25+ Yrs Clout)</span></div>
-          <div class="service-15-item"><span class="service-15-num">06</span><span class="service-15-name">Influencer Promotions & Talent</span></div>
-          <div class="service-15-item"><span class="service-15-num">07</span><span class="service-15-name">Social Media Management (Meta / IG / X)</span></div>
-          <div class="service-15-item"><span class="service-15-num">08</span><span class="service-15-name">Ecommerce Performance Marketing</span></div>
-          <div class="service-15-item"><span class="service-15-num">09</span><span class="service-15-name">Video Editing & Production (8-Yr Virtuoso)</span></div>
-          <div class="service-15-item"><span class="service-15-num">10</span><span class="service-15-name">Packaging & Fascia Designing</span></div>
-          <div class="service-15-item"><span class="service-15-num">11</span><span class="service-15-name">Branding with Complete Guidelines</span></div>
-          <div class="service-15-item"><span class="service-15-num">12</span><span class="service-15-name">Hyperlocal Regional Marketing</span></div>
-          <div class="service-15-item"><span class="service-15-num">13</span><span class="service-15-name">Blog, Copy & Article Writing</span></div>
-          <div class="service-15-item"><span class="service-15-num">14</span><span class="service-15-name">3D Website & Digital Engineering</span></div>
-          <div class="service-15-item"><span class="service-15-num">15</span><span class="service-15-name">OOH Designing (Billboards & Bus Shelters)</span></div>
+          <div class="service-15-item"><span class="service-15-num">02</span><span class="service-15-name">Lead Generation Campaigns</span></div>
+          <div class="service-15-item"><span class="service-15-num">03</span><span class="service-15-name">Creative &amp; Graphic Design</span></div>
+          <div class="service-15-item"><span class="service-15-num">04</span><span class="service-15-name">Event Promotions &amp; Management</span></div>
+          <div class="service-15-item"><span class="service-15-num">05</span><span class="service-15-name">PR &amp; National Media Outreach</span></div>
+          <div class="service-15-item"><span class="service-15-num">06</span><span class="service-15-name">Influencer Collaborations &amp; Talent</span></div>
+          <div class="service-15-item"><span class="service-15-num">07</span><span class="service-15-name">Social Media Management (Meta / IG / LinkedIn)</span></div>
+          <div class="service-15-item"><span class="service-15-num">08</span><span class="service-15-name">E-Commerce Performance Marketing</span></div>
+          <div class="service-15-item"><span class="service-15-num">09</span><span class="service-15-name">Video Editing &amp; Post-Production</span></div>
+          <div class="service-15-item"><span class="service-15-num">10</span><span class="service-15-name">Packaging &amp; Retail Fascia Design</span></div>
+          <div class="service-15-item"><span class="service-15-num">11</span><span class="service-15-name">Brand Identity &amp; Guidelines</span></div>
+          <div class="service-15-item"><span class="service-15-num">12</span><span class="service-15-name">Regional &amp; Hyperlocal Marketing</span></div>
+          <div class="service-15-item"><span class="service-15-num">13</span><span class="service-15-name">Copywriting, Blogs &amp; Brand Content</span></div>
+          <div class="service-15-item"><span class="service-15-num">14</span><span class="service-15-name">Website &amp; Digital Experience Design</span></div>
+          <div class="service-15-item"><span class="service-15-num">15</span><span class="service-15-name">Outdoor Advertising (Billboards &amp; Transit)</span></div>
         </div>
       </div>
     </section>
 
-
     <!-- ======================================================================
-         SECTION: HOW WE ARE BETTER (THE DIFFERENTIATION MATRIX)
+         SECTION: HOW WE COMPARE & OPERATING STANDARD
          ====================================================================== -->
     <section class="section" id="comparison">
       <div class="section-header">
         <div class="section-tag">
-          <i class="fa-solid fa-trophy"></i>
-          <span>The Unfair Advantage</span>
+          <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+          <span>How We Compare</span>
         </div>
         <h2 class="section-title">
-          How We Are Better Than <br>
-          <span class="gradient-text-fusion">Any Other Agency on Earth</span>
+          Why Brands Choose <br>
+          <span class="gradient-text-fusion">Malingo × The Brand Outreach</span>
         </h2>
         <p class="section-desc">
-          Compare the reality of working with standard generic marketing agencies versus the lethal synergy of Malingo × The Brand Outreach.
+          A practical look at how an integrated, senior-led agency partnership compares to standard agencies and disconnected freelancers.
         </p>
       </div>
 
@@ -545,58 +555,58 @@
         <table class="diff-table">
           <thead>
             <tr>
-              <th style="width: 28%;">Key Strategic Factor</th>
-              <th style="width: 36%;">Standard Marketing Agency / Freelancers</th>
-              <th style="width: 36%;" class="col-highlight">Malingo × The Brand Outreach</th>
+              <th style="width: 26%;">Key Factor</th>
+              <th style="width: 35%;">Typical Agency / Freelancers</th>
+              <th style="width: 39%;" class="col-highlight">Malingo × The Brand Outreach</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Leadership Experience</strong></td>
-              <td>Junior account managers with 1–2 years in the field.</td>
-              <td class="col-highlight">
-                <span class="diff-badge-win"><i class="fa-solid fa-circle-check"></i> 25+ Years Legacy</span><br>
-                Owners with a quarter-century of news agency and marketing dominance.
+              <td data-label="Key Factor"><strong>Senior Leadership</strong></td>
+              <td data-label="Typical Agency">Junior account managers with 1–2 years of experience handling client strategy.</td>
+              <td data-label="Malingo × TBO" class="col-highlight">
+                <span class="diff-badge-win"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> 25+ Years Leadership</span><br>
+                Founders and senior specialists with decades in national media, sales, and digital marketing.
               </td>
             </tr>
             <tr>
-              <td><strong>Methodology & Scaling</strong></td>
-              <td>"Intuition", gut feeling, and reused basic templates.</td>
-              <td class="col-highlight">
-                <span class="diff-badge-win"><i class="fa-solid fa-circle-check"></i> 100% Data-Backed</span><br>
-                Deep market research, trend analytics, and predictive ROAS models.
+              <td data-label="Key Factor"><strong>Campaign Methodology</strong></td>
+              <td data-label="Typical Agency">Guesswork, generic templates, and activity without commercial tracking.</td>
+              <td data-label="Malingo × TBO" class="col-highlight">
+                <span class="diff-badge-win"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Research &amp; Data First</span><br>
+                Structured audience research, creative testing, and transparent CPL / ROAS reporting.
               </td>
             </tr>
             <tr>
-              <td><strong>Media & PR Connections</strong></td>
-              <td>Outsourced PR to third-party wire services with no reach.</td>
-              <td class="col-highlight">
-                <span class="diff-badge-win"><i class="fa-solid fa-circle-check"></i> Tier-1 Newsroom Access</span><br>
-                Direct executive access to mainstream television, newspapers, and national editors.
+              <td data-label="Key Factor"><strong>Media &amp; PR Access</strong></td>
+              <td data-label="Typical Agency">Paid press wire blasts with minimal editorial visibility or newsroom trust.</td>
+              <td data-label="Malingo × TBO" class="col-highlight">
+                <span class="diff-badge-win"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Direct Newsroom Network</span><br>
+                Direct relationships with national television, newspapers, and respected digital editors.
               </td>
             </tr>
             <tr>
-              <td><strong>Video & Creative Standards</strong></td>
-              <td>Generic Canva graphics and robotic stock footage.</td>
-              <td class="col-highlight">
-                <span class="diff-badge-win"><i class="fa-solid fa-circle-check"></i> Cinematic Post-Production</span><br>
-                8-year veteran motion editors & creative directors crafting viral thumb-stoppers.
+              <td data-label="Key Factor"><strong>Creative &amp; Production</strong></td>
+              <td data-label="Typical Agency">Stock visuals and recycled social templates that look like every competitor.</td>
+              <td data-label="Malingo × TBO" class="col-highlight">
+                <span class="diff-badge-win"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Dedicated Craft Team</span><br>
+                8+ year veteran video editors and designers creating brand-specific visuals and packaging.
               </td>
             </tr>
             <tr>
-              <td><strong>Enterprise Sales Alignment</strong></td>
-              <td>Zero understanding of sales cycles; only delivers "clicks".</td>
-              <td class="col-highlight">
-                <span class="diff-badge-win"><i class="fa-solid fa-circle-check"></i> 20-Yr Sales Leadership</span><br>
-                Direct sales integration led by Madhur (active on Levanto Green enterprise accounts).
+              <td data-label="Key Factor"><strong>Sales Alignment</strong></td>
+              <td data-label="Typical Agency">Focuses on clicks and impressions with no link to your actual sales cycle.</td>
+              <td data-label="Malingo × TBO" class="col-highlight">
+                <span class="diff-badge-win"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> 20-Yr Sales Experience</span><br>
+                Commercial pipeline alignment led by Madhur across enterprise accounts including Livanto Green Infra.
               </td>
             </tr>
             <tr>
-              <td><strong>Client Support & POC</strong></td>
-              <td>Slow support tickets, automated bots, and frequent ghosting.</td>
-              <td class="col-highlight">
-                <span class="diff-badge-win"><i class="fa-solid fa-circle-check"></i> 24/7 Dedicated Concierge</span><br>
-                Aryaman as your direct executive point of contact with sub-15-minute response times.
+              <td data-label="Key Factor"><strong>Client Communication</strong></td>
+              <td data-label="Typical Agency">Slow ticket queues, fragmented handoffs, and missed follow-ups.</td>
+              <td data-label="Malingo × TBO" class="col-highlight">
+                <span class="diff-badge-win"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Direct Senior POC</span><br>
+                Aryaman as your dedicated operations contact with fast, clear turnaround times.
               </td>
             </tr>
           </tbody>
@@ -607,7 +617,7 @@
       <div class="quality-standard-block" id="quality">
         <div class="quality-standard-header">
           <div class="section-tag gold">
-            <i class="fa-solid fa-compass-drafting"></i>
+            <i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
             <span>The Standard Behind The Work</span>
           </div>
           <h3 class="quality-standard-title">
@@ -686,10 +696,10 @@
             <h4>The Business Truth</h4>
             <p>You know the product, customers, margins, and commercial priorities. That insight stays embedded in the work from day one.</p>
             <div class="partnership-pills">
-              <span>Product & customer knowledge</span>
+              <span>Product &amp; customer knowledge</span>
               <span>Business priorities</span>
-              <span>Timely feedback & approvals</span>
-              <span>Sales & market context</span>
+              <span>Timely feedback &amp; approvals</span>
+              <span>Sales &amp; market context</span>
             </div>
           </div>
 
@@ -700,10 +710,10 @@
             <h4>The Capability to Move It Forward</h4>
             <p>Research, positioning, design, content production, performance media, PR authority, and disciplined optimization.</p>
             <div class="partnership-pills">
-              <span>Strategy & direction</span>
+              <span>Strategy &amp; direction</span>
               <span>Creative production</span>
               <span>Campaign execution</span>
-              <span>Measurement & learning</span>
+              <span>Measurement &amp; learning</span>
             </div>
           </div>
         </div>
@@ -716,88 +726,86 @@
     </section>
 
     <!-- ======================================================================
-         SECTION: THE TITANS (LEADERSHIP & CORE STAFF ROSTER)
+         SECTION: LEADERSHIP TEAM
          ====================================================================== -->
     <section class="section" id="titans">
       <div class="section-header">
         <div class="section-tag gold">
-          <i class="fa-solid fa-id-card-clip"></i>
-          <span>The Human Engines</span>
+          <i class="fa-solid fa-id-card-clip" aria-hidden="true"></i>
+          <span>Our People</span>
         </div>
         <h2 class="section-title">
-          Meet Our Leadership <span class="gradient-text-malingo">& Executive Staff</span>
+          Meet Our <span class="gradient-text-malingo">Leadership Team</span>
         </h2>
         <p class="section-desc">
-          Click on any Titan’s dossier card to explore their full career biography, verified achievements, and specialized superpowers.
+          The founders, strategists, creatives, and account leads who work directly on your brand. Select any profile to read their full background.
         </p>
       </div>
 
-      <!-- Works-Wheel 3D Cylindrical Drum Staff Showcase -->
-      <div class="staff-wheel-outer-wrap" id="staff-wheel-outer">
-        <div class="wheel-controls-bar">
-          <div class="wheel-instruction-chip">
-            <i class="fa-solid fa-arrows-up-down"></i>
-            <span>Scroll wheel or drag vertically to turn drum • Click card for full career dossier</span>
-          </div>
-          <div class="staff-view-switcher">
-            <button id="btn-view-wheel" class="view-btn active" type="button"><i class="fa-solid fa-circle-notch"></i> 3D Drum Wheel</button>
-            <button id="btn-view-grid" class="view-btn" type="button"><i class="fa-solid fa-border-all"></i> All Dossiers Grid</button>
-          </div>
+      <!-- Persistent View Switcher Bar (Always Accessible in Both Views) -->
+      <div class="wheel-controls-bar" id="team-controls-bar">
+        <div class="wheel-instruction-chip" id="wheel-instruction-chip">
+          <i class="fa-solid fa-arrows-up-down" aria-hidden="true"></i>
+          <span>Scroll or drag to browse • Select any profile for full details</span>
         </div>
+        <div class="staff-view-switcher" role="tablist" aria-label="Team display view">
+          <button id="btn-view-wheel" class="view-btn active" type="button" role="tab" aria-selected="true"><i class="fa-solid fa-circle-notch" aria-hidden="true"></i> Interactive View</button>
+          <button id="btn-view-grid" class="view-btn" type="button" role="tab" aria-selected="false"><i class="fa-solid fa-border-all" aria-hidden="true"></i> Team Grid</button>
+        </div>
+      </div>
 
+      <!-- Interactive Cylindrical Showcase -->
+      <div class="staff-wheel-outer-wrap" id="staff-wheel-outer">
         <div id="staff-works-wheel" class="staff-wheel-container">
-          <div class="staff-wheel-stage" id="staff-wheel-stage" tabindex="0" role="listbox" aria-label="Leadership Titans 2026">
+          <div class="staff-wheel-stage" id="staff-wheel-stage" tabindex="0" role="listbox" aria-label="Leadership Team">
             <div class="staff-wheel-pivot" id="staff-wheel-pivot">
-              <!-- Dynamically populated with Titan cards -->
+              <!-- Populated dynamically via JS -->
             </div>
           </div>
 
-          <!-- Ring label at rest (turn = 0) -->
           <div class="staff-wheel-ring-title" id="staff-wheel-label">
-            Titans '26
+            Our Team
           </div>
 
-          <!-- Front card title & interactive drawer when turned (turn > 0) -->
           <div class="staff-wheel-front-title" id="staff-wheel-title">
             <span class="front-badge" id="staff-front-badge">Malingo Founder</span>
             <h3 class="front-name" id="staff-front-name">Kushagra</h3>
-            <p class="front-role" id="staff-front-role">Founder & Managing Director</p>
+            <p class="front-role" id="staff-front-role">Founder &amp; Managing Director</p>
             <div class="front-superpower" id="staff-front-superpower">
-              <i class="fa-solid fa-bolt" style="color: var(--tbo-gold); font-size: 1.1rem; margin-top: 2px;"></i>
-              <span id="staff-front-superpower-text">Mastering viral algorithm mechanics, performance advertising, and scaling brands.</span>
+              <i class="fa-solid fa-briefcase" style="color: var(--tbo-gold); font-size: 1rem; margin-top: 2px;" aria-hidden="true"></i>
+              <span id="staff-front-superpower-text">Performance media architecture, growth strategy, and digital campaign scaling.</span>
             </div>
             <button class="front-dossier-btn" id="staff-front-modal-btn" type="button">
-              <span>Inspect Full Career Dossier</span>
-              <i class="fa-solid fa-arrow-right"></i>
+              <span>View Full Profile</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </button>
           </div>
 
-          <!-- Right side Titan quick navigation index -->
           <ol class="staff-wheel-index" id="staff-wheel-index">
-            <!-- Buttons dynamically populated -->
+            <!-- Populated dynamically via JS -->
           </ol>
 
-          <!-- Floating Interactive Controls Bar -->
           <div class="wheel-floating-controls" id="wheel-floating-controls">
-            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-prev" title="Previous Titan">
-              <i class="fa-solid fa-chevron-left"></i> Prev
+            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-prev" title="Previous Member">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Prev
             </button>
-            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-auto" title="Auto-Play 3D Drum Tour">
-              <i class="fa-solid fa-play" id="icon-wheel-play"></i> <span id="label-wheel-auto">Auto-Tour</span>
+            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-auto" title="Auto-Browse Team">
+              <i class="fa-solid fa-play" id="icon-wheel-play" aria-hidden="true"></i> <span id="label-wheel-auto">Auto-Play</span>
             </button>
-            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-next" title="Next Titan">
-              Next <i class="fa-solid fa-chevron-right"></i>
+            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-next" title="Next Member">
+              Next <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </button>
-            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-ring" title="Ring Overview">
-              <i class="fa-solid fa-rotate-left"></i> Ring
+            <button type="button" class="wheel-ctrl-btn" id="btn-wheel-ring" title="Overview Ring">
+              <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Ring
             </button>
           </div>
         </div>
       </div>
 
+      <!-- Responsive Team Grid (Default on Mobile, Switchable on Desktop) -->
       <div class="staff-grid" id="staff-grid-main">
         <!-- 1. Kushagra -->
-        <div class="staff-card tilt-3d" data-staff="kushagra">
+        <article class="staff-card tilt-3d" data-staff="kushagra" tabindex="0">
           <div class="staff-img-wrap">
             <img src="./STAFF/kushagra.png" alt="Kushagra - Founder of Malingo" class="staff-img">
             <div class="staff-overlay-gradient"></div>
@@ -806,188 +814,187 @@
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Kushagra</h3>
-            <span class="staff-role">Founder & Managing Director (Malingo)</span>
+            <span class="staff-role">Founder &amp; Managing Director (Malingo)</span>
             <p class="staff-bio">
-              The growth visionary behind Malingo. Over a decade mastering viral algorithm mechanics, performance advertising, and scaling brands at breakneck speed.
+              Leads Malingo’s performance marketing, digital strategy, and creative operations — helping consumer and B2B brands grow through data-backed campaigns.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Algorithm Scaling</span>
+              <span class="skill-pill">Growth Strategy</span>
               <span class="skill-pill">Performance Ads</span>
-              <span class="skill-pill">Growth Science</span>
+              <span class="skill-pill">Creative Testing</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 2. Shikha Ma'am -->
-        <div class="staff-card tilt-3d" data-staff="shekha">
+        <article class="staff-card tilt-3d" data-staff="shekha" tabindex="0">
           <div class="staff-img-wrap">
-            <img src="./STAFF/shekha mam.png" alt="Shikha Ma'am - Owner, The Brand Outreach" class="staff-img">
+            <img src="./STAFF/shekha mam.png" alt="Shikha Ma'am - Co-Founder, The Brand Outreach" class="staff-img">
             <div class="staff-overlay-gradient"></div>
-            <span class="staff-brand-tag tag-tbo">TBO Owner</span>
+            <span class="staff-brand-tag tag-tbo">TBO Co-Founder</span>
             <span class="staff-exp-badge">25+ Yrs Experience</span>
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Shikha Ma'am</h3>
-            <span class="staff-role">Co-Founder & Owner (The Brand Outreach)</span>
+            <span class="staff-role">Co-Founder &amp; Owner (The Brand Outreach)</span>
             <p class="staff-bio">
-              Quarter-century veteran in national news agency leadership and marketing agencies. Commands direct media authority, corporate PR, and brand reputation.
+              Over 25 years across national news agencies and corporate communications, specializing in mainstream media relations, PR strategy, and brand reputation.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Tier-1 PR</span>
-              <span class="skill-pill">National News Agency</span>
-              <span class="skill-pill">Reputation Authority</span>
+              <span class="skill-pill">National PR</span>
+              <span class="skill-pill">Media Relations</span>
+              <span class="skill-pill">Reputation Strategy</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 3. Amit Sir -->
-        <div class="staff-card tilt-3d" data-staff="amit">
+        <article class="staff-card tilt-3d" data-staff="amit" tabindex="0">
           <div class="staff-img-wrap">
-            <img src="./STAFF/amit sir.png" alt="Amit Sir - Owner, The Brand Outreach" class="staff-img">
+            <img src="./STAFF/amit sir.png" alt="Amit Sir - Co-Founder, The Brand Outreach" class="staff-img">
             <div class="staff-overlay-gradient"></div>
-            <span class="staff-brand-tag tag-tbo">TBO Owner</span>
+            <span class="staff-brand-tag tag-tbo">TBO Co-Founder</span>
             <span class="staff-exp-badge">25+ Yrs Experience</span>
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Amit Sir</h3>
-            <span class="staff-role">Co-Founder & Owner (The Brand Outreach)</span>
+            <span class="staff-role">Co-Founder &amp; Owner (The Brand Outreach)</span>
             <p class="staff-bio">
-              Over 25 years navigating high-stakes news syndicates and enterprise marketing. The institutional anchor opening corporate doors and mainstream credibility.
+              More than 25 years leading editorial partnerships, corporate outreach, and brand communications for enterprises and public institutions.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Enterprise Outreach</span>
+              <span class="skill-pill">Corporate Outreach</span>
               <span class="skill-pill">Media Strategy</span>
-              <span class="skill-pill">Institutional Clout</span>
+              <span class="skill-pill">Public Affairs</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 4. Madhur -->
-        <div class="staff-card tilt-3d" data-staff="madhur">
+        <article class="staff-card tilt-3d" data-staff="madhur" tabindex="0">
           <div class="staff-img-wrap">
-            <img src="./STAFF/madhur sir.png" alt="Madhur - Director of Sales" class="staff-img">
+            <img src="./STAFF/madhur sir.png" alt="Madhur - Director of Enterprise Sales" class="staff-img">
             <div class="staff-overlay-gradient"></div>
             <span class="staff-brand-tag tag-tbo">Enterprise Sales</span>
             <span class="staff-exp-badge">20 Yrs Experience</span>
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Madhur</h3>
-            <span class="staff-role">Director of Enterprise Sales & Levanto Green Lead</span>
+            <span class="staff-role">Director of Enterprise Sales &amp; Account Lead</span>
             <p class="staff-bio">
-              A 20-year sales powerhouse handling major enterprise accounts including Levanto Green. Masters high-ticket negotiations, strategic partnerships, and 8-figure deals.
+              20 years in corporate sales and strategic partnerships, overseeing key enterprise engagements including Livanto Green Infra and industrial clients.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Levanto Green Lead</span>
-              <span class="skill-pill">20-Yr Sales Authority</span>
-              <span class="skill-pill">High-Ticket Deals</span>
+              <span class="skill-pill">Livanto Green Lead</span>
+              <span class="skill-pill">Enterprise Sales</span>
+              <span class="skill-pill">Key Accounts</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 5. Aryaman -->
-        <div class="staff-card tilt-3d" data-staff="aryaman">
+        <article class="staff-card tilt-3d" data-staff="aryaman" tabindex="0">
           <div class="staff-img-wrap">
-            <img src="./STAFF/aryaman.png" alt="Aryaman - Head of Operations & POC" class="staff-img">
+            <img src="./STAFF/aryaman.png" alt="Aryaman - Head of Operations and Client POC" class="staff-img">
             <div class="staff-overlay-gradient"></div>
-            <span class="staff-brand-tag tag-malingo">Operations Anchor</span>
-            <span class="staff-exp-badge">VIP Client Concierge</span>
+            <span class="staff-brand-tag tag-malingo">Operations</span>
+            <span class="staff-exp-badge">Client POC</span>
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Aryaman</h3>
-            <span class="staff-role">Head of Operations & Strategic Client POC</span>
+            <span class="staff-role">Head of Operations &amp; Client Point of Contact</span>
             <p class="staff-bio">
-              The operational linchpin overseeing flawless campaign execution, VIP client liaison, and strategic point-of-contact handling with 24/7 responsiveness.
+              Coordinates delivery across creative, media, and PR teams while serving as the primary point of contact for client briefs, timelines, and weekly reviews.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Operations Maestro</span>
-              <span class="skill-pill">Client Success POC</span>
-              <span class="skill-pill">Strategic Workflow</span>
+              <span class="skill-pill">Account Operations</span>
+              <span class="skill-pill">Client Delivery</span>
+              <span class="skill-pill">Sprint Planning</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 6. Mayank -->
-        <div class="staff-card tilt-3d" data-staff="mayank">
+        <article class="staff-card tilt-3d" data-staff="mayank" tabindex="0">
           <div class="staff-img-wrap">
-            <img src="./STAFF/mayank.png" alt="Mayank - Senior Sales & Strategy" class="staff-img">
+            <img src="./STAFF/mayank.png" alt="Mayank - Senior Sales and Growth Strategist" class="staff-img">
             <div class="staff-overlay-gradient"></div>
-            <span class="staff-brand-tag tag-malingo">Growth Strategist</span>
+            <span class="staff-brand-tag tag-malingo">Growth Strategy</span>
             <span class="staff-exp-badge">10+ Yrs Experience</span>
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Mayank</h3>
-            <span class="staff-role">Senior Sales & Strategic Growth Specialist</span>
+            <span class="staff-role">Senior Sales &amp; Growth Strategist</span>
             <p class="staff-bio">
-              A decisive sales and strategic force who architects client acquisition funnels, analyzes market blindspots, and scales revenue velocity across emerging verticals.
+              Combines 10+ years of commercial sales experience with funnel planning to structure practical acquisition roadmaps and client onboarding audits.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Revenue Architecture</span>
-              <span class="skill-pill">Sales Funnels</span>
-              <span class="skill-pill">Market Expansion</span>
+              <span class="skill-pill">Funnel Strategy</span>
+              <span class="skill-pill">Commercial Sales</span>
+              <span class="skill-pill">Growth Planning</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 7. Dev -->
-        <div class="staff-card tilt-3d" data-staff="dev">
+        <article class="staff-card tilt-3d" data-staff="dev" tabindex="0">
           <div class="staff-img-wrap">
             <img src="./STAFF/dev.png" alt="Dev - Lead Video Editor" class="staff-img">
             <div class="staff-overlay-gradient"></div>
-            <span class="staff-brand-tag tag-malingo">Video Virtuoso</span>
+            <span class="staff-brand-tag tag-malingo">Video Production</span>
             <span class="staff-exp-badge">8 Yrs Experience</span>
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Dev</h3>
-            <span class="staff-role">Lead Video Editor & Viral Motion Artist</span>
+            <span class="staff-role">Lead Video Editor &amp; Motion Designer</span>
             <p class="staff-bio">
-              Eight years mastering high-octane video editing, kinetic typography, and viral retention algorithms. Transforms raw ideas into multi-million-view video assets.
+              Eight years in commercial post-production, crafting short-form reels, performance ad videos, and motion graphics designed to hold viewer attention.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Viral Reels & Shorts</span>
-              <span class="skill-pill">8-Yr Post-Production</span>
-              <span class="skill-pill">Hook Retention</span>
+              <span class="skill-pill">Reels &amp; Shorts</span>
+              <span class="skill-pill">Post-Production</span>
+              <span class="skill-pill">Motion Design</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- 8. Jeetu -->
-        <div class="staff-card tilt-3d" data-staff="jeetu">
+        <article class="staff-card tilt-3d" data-staff="jeetu" tabindex="0">
           <div class="staff-img-wrap">
-            <img src="./STAFF/jeetu.png" alt="Jeetu - Creative Director & Graphic Designer" class="staff-img">
+            <img src="./STAFF/jeetu.png" alt="Jeetu - Creative Director and Lead Designer" class="staff-img">
             <div class="staff-overlay-gradient"></div>
-            <span class="staff-brand-tag tag-malingo">Creative Director</span>
+            <span class="staff-brand-tag tag-malingo">Creative Direction</span>
             <span class="staff-exp-badge">8+ Yrs Experience</span>
           </div>
           <div class="staff-body">
             <h3 class="staff-name">Jeetu (Jitu)</h3>
-            <span class="staff-role">Creative Director & Lead Visual Designer</span>
+            <span class="staff-role">Creative Director &amp; Lead Visual Designer</span>
             <p class="staff-bio">
-              Over 8 years crafting world-class visual identity systems, 3D marketing creatives, and high-converting static ad designs with industry-record CTRs.
+              Over 8 years designing brand identities, retail packaging, outdoor campaigns, and high-performing digital ad creatives across consumer and B2B categories.
             </p>
             <div class="staff-skill-pills">
-              <span class="skill-pill">Visual Identity</span>
-              <span class="skill-pill">High-CTR Ad Design</span>
-              <span class="skill-pill">3D Graphic Systems</span>
+              <span class="skill-pill">Brand Identity</span>
+              <span class="skill-pill">Packaging Design</span>
+              <span class="skill-pill">Ad Creatives</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <!-- ======================================================================
-         SECTION: MARKETING BACKED BY DATA (DIRECT FROM MALINGO SITE)
+         SECTION: RESEARCH, DATA & CAMPAIGN RESULTS
          ====================================================================== -->
     <section class="section" id="data">
       <div class="data-results-card tilt-3d">
         <div class="data-headline-block">
-          <div class="section-tag" style="background: rgba(243, 115, 33, 0.2);">
-            <i class="fa-solid fa-database"></i>
-            <span>Verified Methodology</span>
+          <div class="section-tag">
+            <i class="fa-solid fa-database" aria-hidden="true"></i>
+            <span>Data-Driven Approach</span>
           </div>
-          <h2>Marketing Which Is <span class="gradient-text-malingo">Backed By Real Data</span></h2>
-          <p class="section-desc" style="max-width: 780px; margin: 0 auto; color: var(--text-heading); font-size: 1.15rem;">
-            <b>"Nothing you saw just now came out of intuition."</b><br>
-            We focus on extensive research and quality delivery with the help of Data, customer analysis, and market Trends. This is how we achieve consistent results Reliably!
+          <h2>Marketing Grounded in <span class="gradient-text-malingo">Research &amp; Data</span></h2>
+          <p class="section-desc data-lead-copy">
+            Every campaign begins with audience research, market insights, and clear commercial targets — so creative decisions and media budgets deliver reliable, measurable progress.
           </p>
         </div>
 
@@ -995,50 +1002,50 @@
           <div class="data-metric-box">
             <div class="metric-big">99.4%</div>
             <div class="metric-title">Client Retention Rate</div>
-            <div class="metric-sub">Enterprise clients renew because data doesn't lie.</div>
+            <div class="metric-sub">Long-term partnerships built on clear reporting and steady growth.</div>
           </div>
 
           <div class="data-metric-box">
             <div class="metric-big">4.8x</div>
-            <div class="metric-title">Average Verified ROAS</div>
-            <div class="metric-sub">Across 60+ active e-commerce and B2B funnels.</div>
+            <div class="metric-title">Average Campaign ROAS</div>
+            <div class="metric-sub">Across 60+ active e-commerce and lead-generation funnels.</div>
           </div>
 
           <div class="data-metric-box">
             <div class="metric-big">15 Min</div>
-            <div class="metric-title">Average Response SLA</div>
-            <div class="metric-sub">Direct contact with Aryaman (Operations POC).</div>
+            <div class="metric-title">Average Response Time</div>
+            <div class="metric-sub">Direct access to Aryaman and our senior operations desk.</div>
           </div>
 
           <div class="data-metric-box">
             <div class="metric-big">25+ Yrs</div>
-            <div class="metric-title">Mainstream Media Reach</div>
-            <div class="metric-sub">Deep institutional clout via The Brand Outreach.</div>
+            <div class="metric-title">National Media Reach</div>
+            <div class="metric-sub">Established editorial relationships via The Brand Outreach.</div>
           </div>
         </div>
 
-        <!-- Performance Case Study Snapshots (From Malingo Portfolio 2026, pp. 5–7) -->
+        <!-- Selected Campaign Results -->
         <div class="perf-snapshots-block" id="performance">
           <div class="perf-snapshots-header">
             <div>
               <span class="section-tag" style="margin-bottom: 10px;">
-                <i class="fa-solid fa-bullseye"></i>
-                <span>Verified Campaign Snapshots • Portfolio 2026</span>
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+                <span>Selected Campaign Results</span>
               </span>
               <h3 class="perf-snapshots-title">Results, With the Story <span class="gradient-text-malingo">Behind the Numbers</span></h3>
             </div>
             <p class="perf-snapshots-desc">
-              Three distinct client campaigns from our 2026 portfolio — each figure stays strictly with the brand it belongs to. Open any case file for the full strategic breakdown.
+              Three distinct client campaigns — each figure stays strictly with the brand it belongs to. Open any project for the full strategic breakdown.
             </p>
           </div>
 
           <div class="perf-campaign-grid">
             <!-- Snapshot 1: Neofit -->
             <article class="perf-campaign-card tilt-3d">
-              <div class="perf-campaign-shot" data-lightbox="./CASE_STUDIES/neofit.webp" data-caption="Neofit · Performance Marketing Evidence · Malingo Portfolio 2026 (p.06)">
-                <img src="./CASE_STUDIES/neofit.webp" alt="Neofit performance marketing results from Malingo Portfolio 2026">
-                <span class="perf-shot-label">Portfolio Evidence / 01</span>
-                <span class="perf-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom</span>
+              <div class="perf-campaign-shot" data-lightbox="./CASE_STUDIES/neofit.webp" data-caption="Neofit · Performance Marketing Results">
+                <img src="./CASE_STUDIES/neofit.webp" alt="Neofit performance marketing campaign results">
+                <span class="perf-shot-label">Case Study 01</span>
+                <span class="perf-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Zoom</span>
               </div>
               <div class="perf-campaign-body">
                 <div class="perf-campaign-meta">
@@ -1055,21 +1062,21 @@
                 </div>
                 <div class="perf-campaign-foot">
                   <span>Ad Spend ₹98,442 • CPM ₹11.49</span>
-                  <b>Portfolio p.06</b>
+                  <b>Paid Acquisition</b>
                 </div>
                 <button type="button" class="case-open-btn" data-case-open="neofit">
                   <span>View Full Case Study</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 </button>
               </div>
             </article>
 
             <!-- Snapshot 2: Livanto Green Infra -->
             <article class="perf-campaign-card tilt-3d">
-              <div class="perf-campaign-shot" data-lightbox="./CASE_STUDIES/livanto.webp" data-caption="Livanto Green Infra · Performance Marketing Evidence · Malingo Portfolio 2026 (p.07)">
-                <img src="./CASE_STUDIES/livanto.webp" alt="Livanto Green Infra performance marketing results from Malingo Portfolio 2026">
-                <span class="perf-shot-label">Portfolio Evidence / 02</span>
-                <span class="perf-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom</span>
+              <div class="perf-campaign-shot" data-lightbox="./CASE_STUDIES/livanto.webp" data-caption="Livanto Green Infra · EV Charging Lead Generation Results">
+                <img src="./CASE_STUDIES/livanto.webp" alt="Livanto Green Infra performance marketing campaign results">
+                <span class="perf-shot-label">Case Study 02</span>
+                <span class="perf-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Zoom</span>
               </div>
               <div class="perf-campaign-body">
                 <div class="perf-campaign-meta">
@@ -1085,22 +1092,22 @@
                   <div class="perf-metric"><strong>₹60,523</strong><span>Total Ad Spend</span></div>
                 </div>
                 <div class="perf-campaign-foot">
-                  <span>EV Charging Lead Engine</span>
-                  <b>Portfolio p.07</b>
+                  <span>EV Charging Lead Campaign</span>
+                  <b>Lead Generation</b>
                 </div>
                 <button type="button" class="case-open-btn" data-case-open="livanto">
                   <span>View Full Case Study</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 </button>
               </div>
             </article>
 
             <!-- Snapshot 3: BarWizard -->
             <article class="perf-campaign-card tilt-3d">
-              <div class="perf-campaign-shot" data-lightbox="./CASE_STUDIES/barwizard.webp" data-caption="BarWizard · Performance Marketing Evidence · Malingo Portfolio 2026 (p.05)">
-                <img src="./CASE_STUDIES/barwizard.webp" alt="BarWizard performance marketing results from Malingo Portfolio 2026">
-                <span class="perf-shot-label">Portfolio Evidence / 03</span>
-                <span class="perf-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Zoom</span>
+              <div class="perf-campaign-shot" data-lightbox="./CASE_STUDIES/barwizard.webp" data-caption="BarWizard · Q2 Performance & Growth Results">
+                <img src="./CASE_STUDIES/barwizard.webp" alt="BarWizard performance marketing campaign results">
+                <span class="perf-shot-label">Case Study 03</span>
+                <span class="perf-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Zoom</span>
               </div>
               <div class="perf-campaign-body">
                 <div class="perf-campaign-meta">
@@ -1116,357 +1123,357 @@
                   <div class="perf-metric"><strong>102</strong><span>Academy Leads</span></div>
                 </div>
                 <div class="perf-campaign-foot">
-                  <span>Ad Spend ₹17,784 • Q2 2026</span>
-                  <b>Portfolio p.05</b>
+                  <span>Ad Spend ₹17,784 • Apr–Jun 2026</span>
+                  <b>Performance &amp; Growth</b>
                 </div>
                 <button type="button" class="case-open-btn" data-case-open="barwizard">
                   <span>View Full Case Study</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 </button>
               </div>
             </article>
           </div>
-          <p class="perf-source-note">Source: Malingo Portfolio 2026, pages 5–7. Metrics are displayed per individual client campaign.</p>
+          <p class="perf-source-note">Metrics above reflect individual client campaign performance from our 2026 portfolio.</p>
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         SECTION: CREATIVE POWERS & WORK SHOWCASE (50+ CLIENT PORTFOLIO)
+         SECTION: CASE STUDIES, CLIENT ROSTER & COMPANY PROFILES
          ====================================================================== -->
     <section class="section" id="work">
-      <div class="section-header" style="text-align: center; margin-bottom: 36px;">
-        <div class="section-tag" style="margin-bottom: 14px;">
-          <i class="fa-solid fa-briefcase"></i>
-          <span>Interactive Case Files • Malingo Portfolio 2026</span>
+      <div class="section-header work-section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+          <span>Selected Work</span>
         </div>
-        <h2 class="section-title gradient-text-malingo" style="font-size: 3.35rem; letter-spacing: -1px; margin-bottom: 12px; font-weight: 800;">Case Studies &amp; Brands</h2>
-        <p class="section-desc" style="max-width: 820px; margin: 0 auto; font-size: 1.1rem; color: var(--text-body); line-height: 1.6;">
-          Different brands come with different challenges. Browse our real portfolio work by discipline — open any project to inspect the full case study, strategic approach, and portfolio artwork.
+        <h2 class="section-title gradient-text-malingo">Case Studies &amp; Client Work</h2>
+        <p class="section-desc">
+          Different brands come with different challenges. Browse our work by discipline — open any project to view the strategy, execution, and creative deliverables.
         </p>
       </div>
 
       <!-- Portfolio Category Filter Tabs -->
-      <div class="portfolio-filter-tabs">
-        <button class="filter-btn active" data-filter="all">All Case Studies</button>
-        <button class="filter-btn" data-filter="performance">Performance (3)</button>
-        <button class="filter-btn" data-filter="social">Social &amp; Content (5)</button>
-        <button class="filter-btn" data-filter="branding">Branding &amp; Outdoor (3)</button>
-        <button class="filter-btn" data-filter="packaging">Packaging (9)</button>
-        <button class="filter-btn" data-filter="enterprise">Enterprise &amp; More</button>
+      <div class="portfolio-filter-tabs" role="tablist" aria-label="Filter case studies by category">
+        <button type="button" class="filter-btn active" data-filter="all">All Case Studies</button>
+        <button type="button" class="filter-btn" data-filter="performance">Performance (3)</button>
+        <button type="button" class="filter-btn" data-filter="social">Social &amp; Content (5)</button>
+        <button type="button" class="filter-btn" data-filter="branding">Branding &amp; Outdoor (3)</button>
+        <button type="button" class="filter-btn" data-filter="packaging">Packaging (9)</button>
+        <button type="button" class="filter-btn" data-filter="enterprise">Enterprise &amp; More</button>
       </div>
 
       <div class="work-grid">
-        <!-- 1. BarWizard (Performance) -->
+        <!-- 1. BarWizard -->
         <article class="work-card case-work-card tilt-3d" data-category="performance">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/barwizard.webp" data-caption="BarWizard · Performance Marketing · Malingo Portfolio 2026 (p.05)">
-            <img src="./CASE_STUDIES/barwizard.webp" alt="BarWizard performance campaign evidence from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Performance • p.05</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/barwizard.webp" data-caption="BarWizard · Performance Marketing">
+            <img src="./CASE_STUDIES/barwizard.webp" alt="BarWizard performance campaign showcase" class="work-img" loading="lazy">
+            <span class="work-badge">Performance</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Performance • Bartending Education</div>
             <h3 class="work-title">BarWizard</h3>
             <p class="work-results">Campaign activity connecting multi-platform visibility and audience growth directly to academy enquiries for India's bartending institute since 1996.</p>
             <div class="case-proof-pill">Apr–Jun 2026 · 4.3M Views · 102 Academy Leads</div>
-            <button type="button" class="case-open-btn" data-case-open="barwizard"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="barwizard"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 2. Livanto Green Infra (Performance) -->
+        <!-- 2. Livanto Green Infra -->
         <article class="work-card case-work-card tilt-3d" data-category="performance enterprise">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/livanto.webp" data-caption="Livanto Green Infra · Performance Marketing · Malingo Portfolio 2026 (p.07)">
-            <img src="./CASE_STUDIES/livanto.webp" alt="Livanto Green Infra performance campaign evidence from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Performance • p.07</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/livanto.webp" data-caption="Livanto Green Infra · EV Charging Lead Generation">
+            <img src="./CASE_STUDIES/livanto.webp" alt="Livanto Green Infra lead generation showcase" class="work-img" loading="lazy">
+            <span class="work-badge">EV Lead Gen</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Performance • EV Infrastructure</div>
             <h3 class="work-title">Livanto Green Infra</h3>
             <p class="work-results">Full-funnel lead generation for 30–240 kW EV fast chargers spanning residential, commercial, and fleet charging deployments.</p>
             <div class="case-proof-pill">3,943 Leads · ₹15.35 Blended CPL · 408K Reach</div>
-            <button type="button" class="case-open-btn" data-case-open="livanto"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="livanto"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 3. Neofit (Performance) -->
+        <!-- 3. Neofit -->
         <article class="work-card case-work-card tilt-3d" data-category="performance">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/neofit.webp" data-caption="Neofit · Performance Marketing · Malingo Portfolio 2026 (p.06)">
-            <img src="./CASE_STUDIES/neofit.webp" alt="Neofit performance campaign evidence from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Performance • p.06</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/neofit.webp" data-caption="Neofit · Nutraceuticals Paid Acquisition">
+            <img src="./CASE_STUDIES/neofit.webp" alt="Neofit performance campaign showcase" class="work-img" loading="lazy">
+            <span class="work-badge">Nutraceuticals</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Performance • Nutraceuticals</div>
             <h3 class="work-title">Neofit (B&amp;B Nutretia)</h3>
             <p class="work-results">Multi-platform paid acquisition driving reach, traffic, and qualified leads across eye care, multivitamins, calcium &amp; D3 supplements.</p>
             <div class="case-proof-pill">6.5M Reach · 2,083 Leads · ₹47.26 Blended CPL</div>
-            <button type="button" class="case-open-btn" data-case-open="neofit"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="neofit"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 4. Paytm (Social) -->
+        <!-- 4. Paytm -->
         <article class="work-card case-work-card tilt-3d" data-category="social enterprise">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/paytm.webp" data-caption="Paytm · Social Media Content Writing · Instagram & Facebook (p.09)">
-            <img src="./CASE_STUDIES/paytm.webp" alt="Paytm social media creative examples from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Publicly Listed Fintech</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/paytm.webp" data-caption="Paytm · Social Media Content Writing">
+            <img src="./CASE_STUDIES/paytm.webp" alt="Paytm social media creative showcase" class="work-img" loading="lazy">
+            <span class="work-badge">Listed Fintech</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Social &amp; Content • Fintech</div>
             <h3 class="work-title">Paytm</h3>
             <p class="work-results">Social media content writing across Instagram and Facebook simplifying digital payment and merchant financial services for dual consumer &amp; merchant audiences.</p>
-            <button type="button" class="case-open-btn" data-case-open="paytm"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="paytm"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 5. Mufin Green Finance (Social) -->
+        <!-- 5. Mufin Green Finance -->
         <article class="work-card case-work-card tilt-3d" data-category="social enterprise">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/mufin.webp" data-caption="Mufin Green Finance · Social Media Marketing · LinkedIn, Instagram & Facebook (p.10)">
-            <img src="./CASE_STUDIES/mufin.webp" alt="Mufin Green Finance social media creative examples from Malingo Portfolio 2026" class="work-img">
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/mufin.webp" data-caption="Mufin Green Finance · Multi-Channel Social Media">
+            <img src="./CASE_STUDIES/mufin.webp" alt="Mufin Green Finance social media showcase" class="work-img" loading="lazy">
             <span class="work-badge">₹1700+ Cr Listed</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Social &amp; Content • Green Finance</div>
             <h3 class="work-title">Mufin Green Finance</h3>
             <p class="work-results">Multi-channel social media marketing across LinkedIn, Instagram, and Facebook translating EV &amp; solar financing into clear category leadership.</p>
-            <button type="button" class="case-open-btn" data-case-open="mufin"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="mufin"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 6. Intrend Colours (Social) -->
+        <!-- 6. Intrend Colours -->
         <article class="work-card case-work-card tilt-3d" data-category="social">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/intrend.webp" data-caption="Intrend Colours · Social Media Marketing · Instagram & Facebook (p.11)">
-            <img src="./CASE_STUDIES/intrend.webp" alt="Intrend Colours cosmetics social media creative examples from Malingo Portfolio 2026" class="work-img">
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/intrend.webp" data-caption="Intrend Colours · Cosmetics Social Media">
+            <img src="./CASE_STUDIES/intrend.webp" alt="Intrend Colours cosmetics social media showcase" class="work-img" loading="lazy">
             <span class="work-badge">Cosmetics &amp; Beauty</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Social &amp; Content • Cosmetics</div>
             <h3 class="work-title">Intrend Colours</h3>
             <p class="work-results">Shade-first social media marketing on Instagram and Facebook making an expansive, accessible cosmetics catalogue effortless to discover.</p>
-            <button type="button" class="case-open-btn" data-case-open="intrend"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="intrend"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 7. Colour Valley India (Social) -->
+        <!-- 7. Colour Valley India -->
         <article class="work-card case-work-card tilt-3d" data-category="social enterprise">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/colourvalley.webp" data-caption="Colour Valley India · Social Media Marketing · Instagram & Facebook (p.12)">
-            <img src="./CASE_STUDIES/colourvalley.webp" alt="Colour Valley India social media creative examples from Malingo Portfolio 2026" class="work-img">
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/colourvalley.webp" data-caption="Colour Valley India · Social Media Marketing">
+            <img src="./CASE_STUDIES/colourvalley.webp" alt="Colour Valley India social media showcase" class="work-img" loading="lazy">
             <span class="work-badge">Pan-India Paints</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Social &amp; Content • Paints &amp; Coatings</div>
             <h3 class="work-title">Colour Valley India</h3>
             <p class="work-results">Visual-first social media marketing across Instagram and Facebook showcasing interior/exterior paints, primers, and wall-care durability.</p>
-            <button type="button" class="case-open-btn" data-case-open="colourvalley"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="colourvalley"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
         <!-- 8. Starfox Fashion (Social) -->
         <article class="work-card case-work-card tilt-3d" data-category="social branding">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/starfox_social.webp" data-caption="Starfox Fashion · Social Media Marketing · Instagram & Facebook (p.13)">
-            <img src="./CASE_STUDIES/starfox_social.webp" alt="Starfox Fashion social media creative examples from Malingo Portfolio 2026" class="work-img">
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/starfox_social.webp" data-caption="Starfox Fashion · Social Media Marketing">
+            <img src="./CASE_STUDIES/starfox_social.webp" alt="Starfox Fashion social media showcase" class="work-img" loading="lazy">
             <span class="work-badge">100K+ Customers</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Social &amp; Branding • Men's Apparel</div>
             <h3 class="work-title">Starfox Fashion — Social</h3>
             <p class="work-results">Channel-native social media campaigns on Instagram and Facebook for Ludhiana's contemporary men's fashion label with 100,000+ customers.</p>
-            <button type="button" class="case-open-btn" data-case-open="starfox"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="starfox"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
         <!-- 9. Malee (Branding) -->
         <article class="work-card case-work-card tilt-3d" data-category="branding">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/malee.webp" data-caption="Malee · Logo Design, Outdoor Ads & Brand Guidelines (p.15)">
-            <img src="./CASE_STUDIES/malee.webp" alt="Malee logo, outdoor advertising and brand guidelines from Malingo Portfolio 2026" class="work-img">
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/malee.webp" data-caption="Malee · Logo Design, Outdoor Ads & Brand Guidelines">
+            <img src="./CASE_STUDIES/malee.webp" alt="Malee logo, outdoor advertising and brand guidelines" class="work-img" loading="lazy">
             <span class="work-badge">Identity &amp; OOH</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Branding • Gardening &amp; Eco-Living</div>
             <h3 class="work-title">Malee</h3>
             <p class="work-results">Complete brand identity system: logo design, highway outdoor advertising, and comprehensive brand guidelines built for everyday recognition.</p>
-            <button type="button" class="case-open-btn" data-case-open="malee"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="malee"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
         <!-- 10. Starfox Fashion (Branding & Outdoor) -->
         <article class="work-card case-work-card tilt-3d" data-category="branding">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/starfox_brand.webp" data-caption="Starfox Fashion · Logo Design, Outdoor Ads & Brand Guidelines (p.16)">
-            <img src="./CASE_STUDIES/starfox_brand.webp" alt="Starfox Fashion branding and outdoor advertising from Malingo Portfolio 2026" class="work-img">
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/starfox_brand.webp" data-caption="Starfox Fashion · Logo, Outdoor Ads & Brand Guidelines">
+            <img src="./CASE_STUDIES/starfox_brand.webp" alt="Starfox Fashion branding and outdoor advertising" class="work-img" loading="lazy">
             <span class="work-badge">Branding &amp; OOH</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Branding • Men's Fashion</div>
             <h3 class="work-title">Starfox — Brand &amp; Outdoor</h3>
             <p class="work-results">Unified visual identity, brand guidelines, and high-visibility outdoor advertising connecting offline recognition with digital channels.</p>
-            <button type="button" class="case-open-btn" data-case-open="starfox"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="starfox"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
         <!-- 11. Lytage (Branding) -->
         <article class="work-card case-work-card tilt-3d" data-category="branding enterprise">
-          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/lytage.webp" data-caption="Lytage · Complete Brand Design, Logo, Outdoor Ads & Guidelines (p.17)">
-            <img src="./CASE_STUDIES/lytage.webp" alt="Lytage brand identity and outdoor design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Complete Brand System</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap" data-lightbox="./CASE_STUDIES/lytage.webp" data-caption="Lytage · Brand Identity, Logo & Outdoor Advertising">
+            <img src="./CASE_STUDIES/lytage.webp" alt="Lytage brand identity and outdoor design" class="work-img" loading="lazy">
+            <span class="work-badge">Brand System</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Branding • Consumer Electronics</div>
             <h3 class="work-title">Lytage</h3>
             <p class="work-results">End-to-end brand design, geometric logo identity, transit &amp; outdoor advertising, and repeatable corporate guidelines for consumer electronics.</p>
-            <button type="button" class="case-open-btn" data-case-open="lytage"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="lytage"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 12. California Nuts (Packaging) -->
+        <!-- 12. California Nuts -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_california.webp" data-caption="California Nuts (Chougan) · Packaging Design · Malingo Portfolio 2026 (p.19)">
-            <img src="./CASE_STUDIES/pack_california.webp" alt="California Nuts packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Packaging • p.19</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_california.webp" data-caption="California Nuts (Chougan) · Packaging Design">
+            <img src="./CASE_STUDIES/pack_california.webp" alt="California Nuts packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">Food Packaging</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Gourmet Food</div>
             <h3 class="work-title">California Nuts</h3>
             <p class="work-results">California Almonds pouch design under the Chougan mark putting product clarity, appetite imagery, and confident shelf distinction first.</p>
-            <button type="button" class="case-open-btn" data-case-open="california"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="california"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 13. Go Desi (Packaging) -->
+        <!-- 13. Go Desi -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_godesi.webp" data-caption="Go Desi (Desi Popz) · Packaging Design · Malingo Portfolio 2026 (p.19)">
-            <img src="./CASE_STUDIES/pack_godesi.webp" alt="Go Desi packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Viral FMCG • p.19</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_godesi.webp" data-caption="Go Desi (Desi Popz) · Packaging Design">
+            <img src="./CASE_STUDIES/pack_godesi.webp" alt="Go Desi packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">FMCG Packaging</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Food &amp; Beverages</div>
             <h3 class="work-title">Go Desi (Desi Popz)</h3>
             <p class="work-results">Vibrant Kaccha Aam small-format pouch packaging highlighting flavour personality and an instantly legible ₹5 impulse price point.</p>
-            <button type="button" class="case-open-btn" data-case-open="godesi"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="godesi"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 14. Mithai Magic (Packaging) -->
+        <!-- 14. Mithai Magic -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_mithai.webp" data-caption="Mithai Magic · Takeaway Packaging Sleeve · Malingo Portfolio 2026 (p.19)">
-            <img src="./CASE_STUDIES/pack_mithai.webp" alt="Mithai Magic packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Food Service • p.19</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_mithai.webp" data-caption="Mithai Magic · Takeaway Packaging Sleeve">
+            <img src="./CASE_STUDIES/pack_mithai.webp" alt="Mithai Magic packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">Food Service</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Restaurants &amp; Sweets</div>
             <h3 class="work-title">Mithai Magic</h3>
             <p class="work-results">Branded takeaway container sleeve designed to carry the restaurant's identity cleanly from counter to home dining table.</p>
-            <button type="button" class="case-open-btn" data-case-open="mithai"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="mithai"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 15. Veg House (Packaging) -->
+        <!-- 15. Veg House -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_veghouse.webp" data-caption="Veg House · Multi-Format Food Packaging · Malingo Portfolio 2026 (p.20)">
-            <img src="./CASE_STUDIES/pack_veghouse.webp" alt="Veg House packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Multi-Format • p.20</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_veghouse.webp" data-caption="Veg House · Multi-Format Food Packaging">
+            <img src="./CASE_STUDIES/pack_veghouse.webp" alt="Veg House packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">Multi-Format Pack</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Restaurants &amp; QSR</div>
             <h3 class="work-title">Veg House</h3>
             <p class="work-results">Cohesive multi-container takeaway packaging family uniting bowls and boxes under one identity and "Where every flavour tells a story."</p>
-            <button type="button" class="case-open-btn" data-case-open="veghouse"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="veghouse"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 16. Jovees (Packaging) -->
+        <!-- 16. Jovees -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_jovees.webp" data-caption="Jovees · Sun Shield Protective Lotion Packaging · Malingo Portfolio 2026 (p.20)">
-            <img src="./CASE_STUDIES/pack_jovees.webp" alt="Jovees packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Skincare • p.20</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_jovees.webp" data-caption="Jovees · Sun Shield Protective Lotion Packaging">
+            <img src="./CASE_STUDIES/pack_jovees.webp" alt="Jovees packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">Skincare Pack</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Cosmetics &amp; Skincare</div>
             <h3 class="work-title">Jovees</h3>
             <p class="work-results">Premium Sun Shield Protective Lotion packaging balancing clean dermatology trust with scannable SPF 40 and PA protection details.</p>
-            <button type="button" class="case-open-btn" data-case-open="jovees"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="jovees"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 17. Pulp (Packaging) -->
+        <!-- 17. Pulp -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_pulp.webp" data-caption="Pulp · Coffee & Cacao Scrub Pouch · Malingo Portfolio 2026 (p.20)">
-            <img src="./CASE_STUDIES/pack_pulp.webp" alt="Pulp packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Gen-Z Beauty • p.20</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_pulp.webp" data-caption="Pulp · Coffee & Cacao Scrub Pouch">
+            <img src="./CASE_STUDIES/pack_pulp.webp" alt="Pulp packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">D2C Beauty</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Personal Care</div>
             <h3 class="work-title">Pulp (Coffee &amp; Love)</h3>
             <p class="work-results">Category-breaking dark matte pouch paired with bold pink typography for a coffee &amp; cacao scrub built to pop on shelves and Instagram feeds.</p>
-            <button type="button" class="case-open-btn" data-case-open="pulp"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="pulp"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 18. Bharat Certis (Packaging) -->
+        <!-- 18. Bharat Certis -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging enterprise">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_bharat.webp" data-caption="Bharat Certis (Vestar) · Crop-Care Packaging · Malingo Portfolio 2026 (p.21)">
-            <img src="./CASE_STUDIES/pack_bharat.webp" alt="Bharat Certis packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">AgriScience • p.21</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_bharat.webp" data-caption="Bharat Certis (Vestar) · Crop-Care Packaging">
+            <img src="./CASE_STUDIES/pack_bharat.webp" alt="Bharat Certis packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">AgriScience</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Agriculture &amp; Crop Care</div>
             <h3 class="work-title">Bharat Certis (Vestar)</h3>
             <p class="work-results">High-clarity technical packaging for Vestar (Paclobutrazole 40% SC plant growth regulator), prioritizing instant formulation legibility.</p>
-            <button type="button" class="case-open-btn" data-case-open="bharat"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="bharat"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 19. Dyazo (Packaging) -->
+        <!-- 19. Dyazo -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging enterprise">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_dyazo.webp" data-caption="Dyazo Medusa · Gaming Combo Box · Malingo Portfolio 2026 (p.21)">
-            <img src="./CASE_STUDIES/pack_dyazo.webp" alt="Dyazo packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">Hardware Box • p.21</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_dyazo.webp" data-caption="Dyazo Medusa · Gaming Combo Box">
+            <img src="./CASE_STUDIES/pack_dyazo.webp" alt="Dyazo packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">Hardware Box</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • PC &amp; Mobile Hardware</div>
             <h3 class="work-title">Dyazo (Medusa Combo)</h3>
             <p class="work-results">High-contrast keyboard-and-mouse combo box putting both hardware pieces front and centre for instant retail &amp; e-commerce clarity.</p>
-            <button type="button" class="case-open-btn" data-case-open="dyazo"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="dyazo"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 20. Incase (Packaging) -->
+        <!-- 20. Incase -->
         <article class="work-card case-work-card tilt-3d" data-category="packaging enterprise">
-          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_incase.webp" data-caption="Incase · Message-Led Service Packaging · Malingo Portfolio 2026 (p.21)">
-            <img src="./CASE_STUDIES/pack_incase.webp" alt="Incase packaging design from Malingo Portfolio 2026" class="work-img">
-            <span class="work-badge">B2B Service • p.21</span>
-            <span class="case-img-zoom"><i class="fa-solid fa-expand"></i> View Image</span>
+          <div class="work-img-wrap case-art-wrap pack-light-bg" data-lightbox="./CASE_STUDIES/pack_incase.webp" data-caption="Incase · Message-Led Service Packaging">
+            <img src="./CASE_STUDIES/pack_incase.webp" alt="Incase packaging design" class="work-img" loading="lazy">
+            <span class="work-badge">B2B Packaging</span>
+            <span class="case-img-zoom"><i class="fa-solid fa-expand" aria-hidden="true"></i> View Image</span>
           </div>
           <div class="work-content">
             <div class="work-client">Packaging • Business Proposition</div>
             <h3 class="work-title">Incase</h3>
             <p class="work-results">Message-led blue box anchored by "Increase Project Speed By Months At Zero Extra Cost," making a B2B service promise tangible.</p>
-            <button type="button" class="case-open-btn" data-case-open="incase"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <button type="button" class="case-open-btn" data-case-open="incase"><span>View Case Study</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
           </div>
         </article>
 
-        <!-- 21. Amway India (Enterprise Roster) -->
+        <!-- 21. Amway India -->
         <article class="work-card tilt-3d" data-category="enterprise">
           <div class="work-img-wrap" style="background: linear-gradient(135deg, #182230, #27374d);">
             <div class="brand-logo-card-pod">
-              <img src="./CLIENTS/logos/amway.png" alt="Amway Logo" class="brand-hero-logo">
+              <img src="./CLIENTS/logos/amway.png" alt="Amway Logo" class="brand-hero-logo" loading="lazy">
             </div>
-            <span class="work-badge">Global FMCG Leader</span>
+            <span class="work-badge">Global FMCG</span>
           </div>
           <div class="work-content">
             <div class="work-client">Enterprise • Consumer FMCG &amp; Health</div>
@@ -1475,176 +1482,136 @@
           </div>
         </article>
 
-        <!-- 22. BSDU University (Enterprise Roster) -->
+        <!-- 22. BSDU University -->
         <article class="work-card tilt-3d" data-category="enterprise">
           <div class="work-img-wrap" style="background: linear-gradient(135deg, #172554, #1e40af);">
             <div class="brand-logo-card-pod">
-              <img src="./CLIENTS/logos/bsdu.png" alt="BSDU Logo" class="brand-hero-logo">
+              <img src="./CLIENTS/logos/bsdu.png" alt="BSDU Logo" class="brand-hero-logo" loading="lazy">
             </div>
-            <span class="work-badge">Swiss Dual-System</span>
+            <span class="work-badge">Higher Education</span>
           </div>
           <div class="work-content">
             <div class="work-client">Enterprise • Education &amp; Skills</div>
             <h3 class="work-title">BSDU University Campaign</h3>
-            <p class="work-results">Institutional branding, student admission funnels, and mainstream media coverage for India's premier Swiss-pattern skill university.</p>
+            <p class="work-results">Institutional branding, student admission funnels, and mainstream media coverage for India's Swiss-pattern skill university.</p>
           </div>
         </article>
 
-        <!-- 23. Rajesh Spices (Enterprise Roster) -->
+        <!-- 23. Rajesh Spices -->
         <article class="work-card tilt-3d" data-category="enterprise">
           <div class="work-img-wrap" style="background: linear-gradient(135deg, #450a0a, #7f1d1d);">
             <div class="brand-logo-card-pod">
-              <img src="./CLIENTS/logos/rajesh.png" alt="Rajesh Spices Logo" class="brand-hero-logo">
+              <img src="./CLIENTS/logos/rajesh.png" alt="Rajesh Spices Logo" class="brand-hero-logo" loading="lazy">
             </div>
-            <span class="work-badge">Household FMCG Icon</span>
+            <span class="work-badge">Household FMCG</span>
           </div>
           <div class="work-content">
             <div class="work-client">Enterprise • Food &amp; Spices</div>
             <h3 class="work-title">Rajesh Masale Regional Growth</h3>
-            <p class="work-results">Pan-India regional flavor campaigns, FMCG retail dealer branding, and festival seasonal visual creative direction.</p>
+            <p class="work-results">Pan-India regional campaigns, FMCG retail dealer branding, and seasonal creative direction.</p>
           </div>
         </article>
 
-        <!-- 24. Spectra Interiorz (Enterprise Roster) -->
+        <!-- 24. Spectra Interiorz -->
         <article class="work-card tilt-3d" data-category="enterprise">
           <div class="work-img-wrap" style="background: linear-gradient(135deg, #1c1917, #292524);">
             <div class="brand-logo-card-pod">
-              <img src="./CLIENTS/logos/spectra.png" alt="Spectra Interiorz Logo" class="brand-hero-logo">
+              <img src="./CLIENTS/logos/spectra.png" alt="Spectra Interiorz Logo" class="brand-hero-logo" loading="lazy">
             </div>
-            <span class="work-badge">Luxury Architecture</span>
+            <span class="work-badge">Architecture</span>
           </div>
           <div class="work-content">
             <div class="work-client">Enterprise • Architecture &amp; Commercial</div>
             <h3 class="work-title">Spectra Luxury Spaces</h3>
-            <p class="work-results">High-ticket architectural lead generation, corporate showroom visual assets, and premium property developer portfolios.</p>
+            <p class="work-results">High-intent architectural lead generation, showroom visual assets, and commercial developer portfolios.</p>
           </div>
         </article>
       </div>
 
       <!-- ======================================================================
-           VERIFIED CLIENT LOGO ROSTER WALL (EXTRACTED DIRECTLY FROM PDF PORTFOLIOS)
+           BRANDS WE HAVE PARTNERED WITH (CLIENT LOGO WALL)
            ====================================================================== -->
       <div class="client-roster-wall-container">
-        <div style="text-align: center; margin-bottom: 30px;">
-          <span class="section-tag gold" style="font-size: 0.75rem;">
-            <i class="fa-solid fa-stamp"></i> Official PDF Portfolio Records
+        <div class="roster-wall-header">
+          <span class="section-tag gold">
+            <i class="fa-solid fa-handshake-simple" aria-hidden="true"></i> Our Client Roster
           </span>
           <h3 class="roster-wall-title">
-            Extracted Partner & Client Logos <span class="gradient-text-malingo">(Malingo & The Brand Outreach)</span>
+            Brands We Have <span class="gradient-text-malingo">Partnered With</span>
           </h3>
           <p class="roster-wall-desc">
-            Authentic corporate identities and trademarks of our partners, publicly listed giants, and high-growth brands extracted directly from our 2026 pitch presentations.
+            A selection of listed enterprises, consumer brands, and growth-stage businesses partnered with Malingo and The Brand Outreach.
           </p>
         </div>
 
-        <div class="roster-logos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; align-items: center;">
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/paytm_large.png" alt="Paytm" style="max-height: 48px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/mufin_large.png" alt="Mufin Green Finance" style="max-height: 48px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/amway.png" alt="Amway" style="max-height: 48px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/bca.png" alt="Bharat Certis" style="max-height: 48px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/starfox_large.png" alt="Starfox" style="max-height: 44px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/intrend_large.png" alt="Intrend Colours" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/colourvalley_large.png" alt="Colour Valley" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/malee_clean.png" alt="Malee" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/lytage_large.png" alt="Lytage" style="max-height: 44px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/go_desi_logo.png" alt="Go Desi" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/jovees_logo.png" alt="Jovees" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/bsdu.png" alt="BSDU" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/rajesh.png" alt="Rajesh Spices" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/spectra.png" alt="Spectra" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/neofit.png" alt="Neofit Active" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/teledu.png" alt="Teledu" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/uomo.png" alt="Uomo Luxury" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
-          <div class="roster-logo-card tilt-3d" style="background: #ffffff; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: center; height: 76px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
-            <img src="./CLIENTS/logos/krishaj.png" alt="Krishaj CropCare" style="max-height: 46px; max-width: 100%; object-fit: contain;">
-          </div>
+        <div class="roster-logos-grid">
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/paytm_large.png" alt="Paytm" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/mufin_large.png" alt="Mufin Green Finance" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/amway.png" alt="Amway" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/bca.png" alt="Bharat Certis" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/starfox_large.png" alt="Starfox Fashion" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/intrend_large.png" alt="Intrend Colours" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/colourvalley_large.png" alt="Colour Valley" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/malee_clean.png" alt="Malee" loading="lazy"></div>
+          <div class="roster-logo-card dark-logo-card tilt-3d"><img src="./CLIENTS/logos/lytage_large.png" alt="Lytage" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/go_desi_logo.png" alt="Go Desi" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/jovees_logo.png" alt="Jovees" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/bsdu.png" alt="BSDU University" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/rajesh.png" alt="Rajesh Spices" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/spectra.png" alt="Spectra Interiorz" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/neofit.png" alt="Neofit" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/teledu.png" alt="Teledu" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/uomo.png" alt="Uomo" loading="lazy"></div>
+          <div class="roster-logo-card tilt-3d"><img src="./CLIENTS/logos/krishaj.png" alt="Krishaj CropCare" loading="lazy"></div>
         </div>
       </div>
 
-      <!-- Dual Portfolio PDF Downloads Banner -->
-      <div style="margin-top: 50px;">
-        <div style="text-align: center; margin-bottom: 24px;">
-          <span class="section-tag gold" style="font-size: 0.75rem;">
-            <i class="fa-solid fa-file-pdf"></i> Official Unified Presentation Decks
+      <!-- Company Profile PDF Downloads -->
+      <div class="pdf-profiles-section">
+        <div class="pdf-profiles-header">
+          <span class="section-tag gold">
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Company Profiles
           </span>
-          <h3 class="pdf-section-title">Explore Both Official 2026 Portfolios</h3>
-          <p style="color: var(--text-body); font-size: 0.95rem; max-width: 680px; margin: 0 auto;">
-            Download the authentic pitch decks from both Malingo and The Brand Outreach showcasing our joint capabilities, verified client case studies, and enterprise credentials.
+          <h3 class="pdf-section-title">Download Our 2026 Agency Credentials</h3>
+          <p class="pdf-section-sub">
+            Review our complete service capabilities, selected client case studies, and media credentials across both Malingo and The Brand Outreach.
           </p>
         </div>
 
         <div class="dual-pdf-grid">
-          <!-- Malingo Deck -->
+          <!-- Malingo Profile -->
           <div class="pdf-card-brand malingo-deck tilt-3d">
             <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                <img src="./LOGO/malingo logo.png" alt="Malingo" style="height: 28px;">
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--malingo-orange-light); background: rgba(243,115,33,0.15); padding: 4px 10px; border-radius: 99px;">
-                  45 MB • 19 Slides
-                </span>
+              <div class="pdf-card-top">
+                <img src="./LOGO/malingo logo.png" alt="Malingo" class="pdf-brand-logo">
+                <span class="pdf-meta-pill pdf-meta-malingo">45 MB • 19 Slides</span>
               </div>
-              <h4 class="pdf-deck-title">Malingo Performance & Creative Deck 2026</h4>
-              <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">
-                Deep-dive into performance advertising architectures, high-retention video production breakdowns, and retail packaging blueprints.
+              <h4 class="pdf-deck-title">Malingo — Performance, Creative &amp; Packaging Profile</h4>
+              <p class="pdf-deck-copy">
+                Performance marketing case studies, social media systems, video production work, brand guidelines, and retail packaging portfolio.
               </p>
             </div>
-            <a href="/Malingo%20Portfolio%202026.pdf" target="_blank" class="btn-cta" style="width: 100%; text-align: center; justify-content: center;">
-              <i class="fa-solid fa-download"></i>
-              <span>Download Malingo Deck (PDF)</span>
+            <a href="/Malingo%20Portfolio%202026.pdf" target="_blank" rel="noopener noreferrer" class="btn-cta pdf-download-btn">
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              <span>Download Malingo Profile (PDF)</span>
             </a>
           </div>
 
-          <!-- The Brand Outreach Deck -->
+          <!-- The Brand Outreach Profile -->
           <div class="pdf-card-brand tbo-deck tilt-3d">
             <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                <img src="./LOGO/TBO.png" alt="The Brand Outreach" style="height: 34px;">
-                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--tbo-gold); background: rgba(245,166,35,0.15); padding: 4px 10px; border-radius: 99px;">
-                  15.6 MB • 19 Slides
-                </span>
+              <div class="pdf-card-top">
+                <img src="./LOGO/TBO.png" alt="The Brand Outreach" class="pdf-brand-logo pdf-brand-logo-tbo">
+                <span class="pdf-meta-pill pdf-meta-tbo">15.6 MB • 19 Slides</span>
               </div>
-              <h4 class="pdf-deck-title">The Brand Outreach Excellence Deck 2026</h4>
-              <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">
-                Explore 25+ years of mainstream media relations, tier-1 news agency distribution, national press syndicates, and corporate brand positioning.
+              <h4 class="pdf-deck-title">The Brand Outreach — PR &amp; Media Credentials</h4>
+              <p class="pdf-deck-copy">
+                Over 25 years of mainstream media relations, national news distribution, editorial coverage, and corporate reputation work.
               </p>
             </div>
-            <a href="/The%20Brand%20Outreach%20Portfolio%202026.pdf" target="_blank" class="btn-secondary" style="width: 100%; text-align: center; justify-content: center; border-color: var(--tbo-gold); color: var(--tbo-gold-light);">
-              <i class="fa-solid fa-download"></i>
-              <span>Download TBO Deck (PDF)</span>
+            <a href="/The%20Brand%20Outreach%20Portfolio%202026.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-tbo-outline pdf-download-btn">
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              <span>Download TBO Profile (PDF)</span>
             </a>
           </div>
         </div>
@@ -1652,86 +1619,82 @@
     </section>
 
     <!-- ======================================================================
-         SECTION: INTERACTIVE CONSULTATION & CONTACT DECK
+         SECTION: CONTACT & STRATEGY CALL REQUEST
          ====================================================================== -->
     <section class="section" id="contact">
       <div class="contact-wrapper tilt-3d">
         <!-- Left Contact Info -->
         <div class="contact-info-side">
           <div>
-            <div class="section-tag" style="background: rgba(243, 115, 33, 0.15);">
-              <i class="fa-solid fa-phone"></i>
-              <span>Stop Stressing. Start Dominating.</span>
+            <div class="section-tag">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <span>Start a Conversation</span>
             </div>
             <h2 class="contact-title">
-              Marketing Worries Keeping You Up At Night? <br>
-              <span class="gradient-text-malingo">Your Problems End Here.</span>
+              Let’s Talk About <br>
+              <span class="gradient-text-malingo">Your Brand’s Next Stage.</span>
             </h2>
             <p class="contact-desc">
-              Don’t feel overwhelmed. A 20-minute strategic consultation with our senior leaders across Noida and Gurugram will clarify your exact growth bottlenecks and align us on a guaranteed ROI path.
+              Book a 20-minute strategy call with our senior team across Noida and Gurugram to review your current channels, identify priority opportunities, and map out a practical growth plan.
             </p>
 
             <div class="contact-direct-links">
-              <!-- Malingo Direct WhatsApp / Call -->
-              <a href="https://wa.me/message/EWQ6YJE2UQUHA1" target="_blank" class="contact-item">
-                <div class="contact-item-icon" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">
-                  <i class="fa-brands fa-whatsapp"></i>
+              <!-- Malingo Direct WhatsApp -->
+              <a href="https://wa.me/message/EWQ6YJE2UQUHA1" target="_blank" rel="noopener noreferrer" class="contact-item">
+                <div class="contact-item-icon contact-icon-wa">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </div>
                 <div class="contact-item-detail">
-                  <span>Malingo WhatsApp & Growth Hotline</span>
-                  <strong>+91 78383 02650 (Instant Response)</strong>
+                  <span>Malingo WhatsApp &amp; Direct Line</span>
+                  <strong>+91 78383 02650</strong>
                 </div>
               </a>
 
-              <!-- TBO Direct WhatsApp / Call -->
+              <!-- TBO Direct Call -->
               <a href="tel:+919711151358" class="contact-item">
-                <div class="contact-item-icon" style="background: rgba(245, 166, 35, 0.15); color: var(--tbo-gold);">
-                  <i class="fa-solid fa-phone"></i>
+                <div class="contact-item-icon contact-icon-gold">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
                 </div>
                 <div class="contact-item-detail">
                   <span>The Brand Outreach Executive Desk</span>
-                  <strong>+91 97111 51358 (Corporate & PR Line)</strong>
+                  <strong>+91 97111 51358 (Corporate &amp; PR)</strong>
                 </div>
               </a>
 
               <!-- Direct Email Channels -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <a href="mailto:kushagra@malingo.in" class="contact-item" style="padding: 12px 14px;">
-                  <div class="contact-item-icon" style="width: 36px; height: 36px; font-size: 16px;">
-                    <i class="fa-solid fa-envelope"></i>
+              <div class="contact-email-grid">
+                <a href="mailto:kushagra@malingo.in" class="contact-item contact-email-item">
+                  <div class="contact-item-icon contact-icon-sm">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                   </div>
                   <div class="contact-item-detail">
                     <span>Malingo Desk</span>
-                    <strong style="font-size: 0.85rem;">kushagra@malingo.in</strong>
+                    <strong>kushagra@malingo.in</strong>
                   </div>
                 </a>
-                <a href="mailto:info@thebrandoutreach.in" class="contact-item" style="padding: 12px 14px;">
-                  <div class="contact-item-icon" style="width: 36px; height: 36px; font-size: 16px; background: rgba(245,166,35,0.15); color: var(--tbo-gold);">
-                    <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:info@thebrandoutreach.in" class="contact-item contact-email-item">
+                  <div class="contact-item-icon contact-icon-sm contact-icon-gold">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                   </div>
                   <div class="contact-item-detail">
                     <span>TBO Corporate</span>
-                    <strong style="font-size: 0.85rem;">info@thebrandoutreach.in</strong>
+                    <strong>info@thebrandoutreach.in</strong>
                   </div>
                 </a>
               </div>
 
-              <!-- Dual Corporate Regional Headquarters -->
+              <!-- Offices -->
               <div class="dual-hq-grid">
                 <div class="hq-card">
-                  <span class="hq-badge" style="background: rgba(243,115,33,0.15); color: var(--malingo-orange-light);">
-                    Noida Innovation Hub
-                  </span>
-                  <p style="font-size: 0.84rem; color: var(--text-heading); font-weight: 600; line-height: 1.5;">
+                  <span class="hq-badge hq-badge-malingo">Noida Office</span>
+                  <p class="hq-address">
                     Shop 12, Lower Ground Floor, Mahagun Mart, Sector 78, Noida, Uttar Pradesh 201305
                   </p>
                 </div>
 
                 <div class="hq-card">
-                  <span class="hq-badge" style="background: rgba(245,166,35,0.15); color: var(--tbo-gold);">
-                    Gurugram Corporate Towers
-                  </span>
-                  <p style="font-size: 0.84rem; color: var(--text-heading); font-weight: 600; line-height: 1.5;">
+                  <span class="hq-badge hq-badge-tbo">Gurugram Office</span>
+                  <p class="hq-address">
                     423, Suncity Success Tower, Golf Course Ext Rd, The Close South, Sector 65, Gurugram, Haryana 122102
                   </p>
                 </div>
@@ -1739,13 +1702,13 @@
             </div>
           </div>
 
-          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 16px;">
-            <i class="fa-solid fa-shield-halved" style="color: var(--tbo-gold);"></i>
-            Strict Non-Disclosure Guarantee (NDA) signed prior to any campaign data audit.
+          <div class="contact-nda-note">
+            <i class="fa-solid fa-shield-halved" style="color: var(--tbo-gold);" aria-hidden="true"></i>
+            <span>Non-Disclosure Agreement (NDA) signed prior to any campaign or account audit.</span>
           </div>
         </div>
 
-        <!-- Right Quick Growth Audit Form (Wired to Malingo & TBO Email Desks via Netlify Forms) -->
+        <!-- Right Inquiry Form (Wired to Malingo & TBO Email Desks via Netlify Forms) -->
         <form id="growth-audit-form" name="growth-audit" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
           <input type="hidden" name="form-name" value="growth-audit">
           <input type="hidden" name="source_page" id="form-source-page" value="https://malingo.in">
@@ -1753,14 +1716,14 @@
             <label>Don’t fill this out if you’re human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
           </p>
 
-          <h3 class="contact-form-heading">Request Custom Growth Audit</h3>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
-            Aryaman (Operations POC) and our senior partners in Noida &amp; Gurugram will review your requirements within 15 minutes. Dispatches directly to <strong>kushagra@malingo.in</strong> &amp; <strong>info@thebrandoutreach.in</strong>.
+          <h3 class="contact-form-heading">Request a Growth Audit</h3>
+          <p class="contact-form-sub">
+            Share your requirements below. Every submission goes directly to <strong>kushagra@malingo.in</strong> &amp; <strong>info@thebrandoutreach.in</strong>, and our senior team responds promptly.
           </p>
 
           <div class="form-group">
-            <label for="client-name">Your Full Name / Company Name</label>
-            <input type="text" id="client-name" name="client_name" class="form-input" placeholder="e.g. Kushal Singhania" required>
+            <label for="client-name">Your Name / Company Name</label>
+            <input type="text" id="client-name" name="client_name" class="form-input" placeholder="e.g. Rohan Sharma, Brand Name" required>
           </div>
 
           <div class="form-group">
@@ -1769,42 +1732,42 @@
           </div>
 
           <div class="form-group">
-            <label for="client-service">Primary Growth Goal</label>
+            <label for="client-service">Primary Focus</label>
             <select id="client-service" name="growth_goal" class="form-select">
-              <option value="Performance Paid Ads Scaling (Meta / Google / TikTok)">Performance Paid Ads Scaling (Meta / Google / TikTok)</option>
-              <option value="Viral Short-Form Video & Reel Production">Viral Short-Form Video &amp; Reel Production</option>
-              <option value="Tier-1 Mainstream PR & News Agency Outreach">Tier-1 Mainstream PR &amp; News Agency Outreach</option>
-              <option value="3D Brand Identity, Packaging & Visual Overhaul">3D Brand Identity, Packaging &amp; Visual Overhaul</option>
-              <option value="Enterprise B2B Sales & High-Ticket Deals">Enterprise B2B Sales &amp; High-Ticket Deals</option>
-              <option value="Full Agency Retainer (All-In-One Domination)">Full Agency Retainer (All-In-One Domination)</option>
+              <option value="Performance Paid Ads Scaling (Meta / Google / YouTube)">Performance Paid Ads (Meta / Google / YouTube)</option>
+              <option value="Short-Form Video & Reel Production">Short-Form Video &amp; Reel Production</option>
+              <option value="National PR & Mainstream Media Outreach">National PR &amp; Mainstream Media Outreach</option>
+              <option value="Brand Identity, Packaging & Creative Design">Brand Identity, Packaging &amp; Creative Design</option>
+              <option value="Enterprise B2B Sales & Partnerships">Enterprise B2B Sales &amp; Partnerships</option>
+              <option value="Full-Service Agency Retainer">Full-Service Agency Retainer</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="client-message">Tell Us About Your Brand & Current Targets</label>
-            <textarea id="client-message" name="brand_details" class="form-textarea" placeholder="Describe your current targets, monthly ad spend, and timeline..." required></textarea>
+            <label for="client-message">Tell Us About Your Brand &amp; Goals</label>
+            <textarea id="client-message" name="brand_details" class="form-textarea" placeholder="Share your current priorities, channels, and timeline..." required></textarea>
           </div>
 
           <div id="form-status-msg" class="form-status-msg" role="status" aria-live="polite" hidden></div>
 
-          <div class="offer-btn-wrapper gold-theme" style="width: 100%; padding: 18px 0 8px 0;">
+          <div class="offer-btn-wrapper gold-theme form-submit-wrap">
             <div class="btn-container" style="width: 100%;">
-              <div class="btn-drawer transition-top">⚡ Guaranteed 4.8x ROAS</div>
-              <div class="btn-drawer transition-bottom">...Sub-15 Min Response SLA</div>
+              <div class="btn-drawer transition-top">Direct to Senior Team</div>
+              <div class="btn-drawer transition-bottom">Reply Within 15 Minutes</div>
               <button type="submit" class="btn" style="width: 100%; justify-content: center;">
-                <span class="btn-text">Lock In Free Strategy Call</span>
-                <i class="fa-solid fa-paper-plane" style="color: #fff;"></i>
+                <span class="btn-text">Request Strategy Call</span>
+                <i class="fa-solid fa-paper-plane" style="color: #fff;" aria-hidden="true"></i>
               </button>
-              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
                 <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
               </svg>
-              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
                 <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
               </svg>
-              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
                 <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
               </svg>
-              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32">
+              <svg class="btn-corner" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="-1 1 32 32" aria-hidden="true">
                 <path d="M32,32C14.355,32,0,17.645,0,0h.985c0,17.102,13.913,31.015,31.015,31.015v.985Z" />
               </svg>
             </div>
@@ -1814,31 +1777,31 @@
     </section>
 
     <!-- ======================================================================
-         GLOBAL FOOTER (UNIFIED HEADQUARTERS & CONTACTS)
+         GLOBAL FOOTER
          ====================================================================== -->
     <footer class="footer">
       <div class="footer-top">
         <div class="footer-brand">
-          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+          <div class="footer-logos-row">
             <img src="./LOGO/malingo logo.png" alt="Malingo" style="height: 30px;">
-            <span style="font-size: 14px; color: var(--tbo-gold); font-weight: 700;">✕</span>
+            <span class="footer-logo-sep" aria-hidden="true">×</span>
             <img src="./LOGO/TBO.png" alt="The Brand Outreach" style="height: 34px;">
           </div>
           <p>
-            An international 3D digital marketing & mainstream news media powerhouse. Combining data-backed viral growth science with 25+ years of institutional authority across Gurugram, Noida, and global markets.
+            Malingo in strategic collaboration with The Brand Outreach — integrating performance marketing, creative production, brand design, and 25+ years of national media relations across Noida, Gurugram, and pan-India markets.
           </p>
-          <div style="display: flex; gap: 12px; margin-top: 20px;">
-            <a href="https://www.linkedin.com/company/malingo-media-group/" target="_blank" class="social-icon-wrapper icon-li" style="width: 38px; height: 38px; font-size: 16px;" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
+          <div class="footer-socials-row">
+            <a href="https://www.linkedin.com/company/malingo-media-group/" target="_blank" rel="noopener noreferrer" class="social-icon-wrapper icon-li footer-social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </a>
-            <a href="https://www.instagram.com/malingomedia" target="_blank" class="social-icon-wrapper icon-ig" style="width: 38px; height: 38px; font-size: 16px;" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/malingomedia" target="_blank" rel="noopener noreferrer" class="social-icon-wrapper icon-ig footer-social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://www.facebook.com/malingomedia" target="_blank" class="social-icon-wrapper icon-fb" style="width: 38px; height: 38px; font-size: 16px;" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
+            <a href="https://www.facebook.com/malingomedia" target="_blank" rel="noopener noreferrer" class="social-icon-wrapper icon-fb footer-social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
             </a>
-            <a href="https://wa.me/message/EWQ6YJE2UQUHA1" target="_blank" class="social-icon-wrapper icon-wa" style="width: 38px; height: 38px; font-size: 16px;" aria-label="WhatsApp">
-              <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/message/EWQ6YJE2UQUHA1" target="_blank" rel="noopener noreferrer" class="social-icon-wrapper icon-wa footer-social-icon" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -1846,31 +1809,31 @@
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul class="footer-links">
-            <li><a href="#about" class="footer-link">The Alliance</a></li>
-            <li><a href="#services" class="footer-link">15 Capabilities</a></li>
-            <li><a href="#comparison" class="footer-link">Why We Win</a></li>
-            <li><a href="#titans" class="footer-link">Leadership Titans</a></li>
-            <li><a href="#work" class="footer-link">50+ Client Portfolio</a></li>
+            <li><a href="#about" class="footer-link">About the Partnership</a></li>
+            <li><a href="#services" class="footer-link">Services &amp; Capabilities</a></li>
+            <li><a href="#comparison" class="footer-link">Why Choose Us</a></li>
+            <li><a href="#titans" class="footer-link">Leadership Team</a></li>
+            <li><a href="#work" class="footer-link">Case Studies</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Download Decks</h4>
+          <h4>Company Profiles</h4>
           <ul class="footer-links">
-            <li><a href="/Malingo%20Portfolio%202026.pdf" target="_blank" class="footer-link"><i class="fa-solid fa-file-pdf"></i> Malingo Deck (45MB)</a></li>
-            <li><a href="/The%20Brand%20Outreach%20Portfolio%202026.pdf" target="_blank" class="footer-link"><i class="fa-solid fa-file-pdf"></i> TBO Deck (15.6MB)</a></li>
-            <li><a href="#work" class="footer-link"><i class="fa-solid fa-layer-group"></i> 50+ Case Studies</a></li>
-            <li><a href="#titans" class="footer-link"><i class="fa-solid fa-user-tie"></i> 8 Titan Profiles</a></li>
+            <li><a href="/Malingo%20Portfolio%202026.pdf" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Malingo Profile (45 MB)</a></li>
+            <li><a href="/The%20Brand%20Outreach%20Portfolio%202026.pdf" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> TBO Profile (15.6 MB)</a></li>
+            <li><a href="#work" class="footer-link"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Client Case Studies</a></li>
+            <li><a href="#titans" class="footer-link"><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Leadership Profiles</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Direct Connect</h4>
           <ul class="footer-links">
-            <li><a href="https://wa.me/message/EWQ6YJE2UQUHA1" target="_blank" class="footer-link"><i class="fa-brands fa-whatsapp"></i> +91 78383 02650 (Noida)</a></li>
-            <li><a href="tel:+919711151358" class="footer-link"><i class="fa-solid fa-phone"></i> +91 97111 51358 (Gurugram)</a></li>
-            <li><a href="mailto:kushagra@malingo.in" class="footer-link"><i class="fa-solid fa-envelope"></i> kushagra@malingo.in</a></li>
-            <li><a href="mailto:info@thebrandoutreach.in" class="footer-link"><i class="fa-solid fa-envelope"></i> info@thebrandoutreach.in</a></li>
+            <li><a href="https://wa.me/message/EWQ6YJE2UQUHA1" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> +91 78383 02650 (Noida)</a></li>
+            <li><a href="tel:+919711151358" class="footer-link"><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 97111 51358 (Gurugram)</a></li>
+            <li><a href="mailto:kushagra@malingo.in" class="footer-link"><i class="fa-solid fa-envelope" aria-hidden="true"></i> kushagra@malingo.in</a></li>
+            <li><a href="mailto:info@thebrandoutreach.in" class="footer-link"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@thebrandoutreach.in</a></li>
           </ul>
         </div>
       </div>
@@ -1879,23 +1842,22 @@
         <div>
           © 2026 <strong>Malingo.in</strong> in strategic collaboration with <strong>The Brand Outreach</strong>. All rights reserved.
         </div>
-        <div style="display: flex; gap: 20px;">
-          <a href="#" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Terms of Service</a>
-          <a href="#hero" class="footer-link" style="color: var(--tbo-gold);"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+        <div class="footer-bottom-links">
+          <button type="button" class="footer-link footer-link-btn" data-legal-open="privacy">Privacy Policy</button>
+          <button type="button" class="footer-link footer-link-btn" data-legal-open="terms">Terms of Service</button>
+          <a href="#hero" class="footer-link footer-back-top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top</a>
         </div>
       </div>
     </footer>
 
-
   </div>
 
   <!-- ======================================================================
-       STAFF MODAL DOSSIER
+       TEAM PROFILE MODAL
        ====================================================================== -->
-  <div id="staff-modal-overlay" class="modal-overlay">
+  <div id="staff-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Team member profile">
     <div class="modal-card">
-      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <button id="modal-close-btn" class="modal-close-btn" type="button" aria-label="Close Profile">✕</button>
       <div id="staff-modal-body">
         <!-- Dynamically injected via JavaScript -->
       </div>
@@ -1910,7 +1872,7 @@
       <div class="case-modal-topbar">
         <div class="case-modal-toplabel">
           <span class="case-live-dot"></span>
-          <span id="case-modal-discipline">MALINGO CASE FILE</span>
+          <span id="case-modal-discipline">CASE STUDY</span>
         </div>
         <button id="case-modal-close" class="case-modal-close" type="button" aria-label="Close Case Study">Close ×</button>
       </div>
@@ -1922,11 +1884,21 @@
 
   <div id="portfolio-lightbox" class="portfolio-lightbox" role="dialog" aria-modal="true" aria-label="Portfolio artwork preview" hidden>
     <button id="lightbox-close-btn" class="portfolio-lightbox-close" type="button" aria-label="Close Preview">Close ×</button>
-    <img id="portfolio-lightbox-img" alt="Expanded Malingo portfolio work">
+    <img id="portfolio-lightbox-img" alt="Expanded portfolio artwork">
     <div id="portfolio-lightbox-caption" class="portfolio-lightbox-caption"></div>
   </div>
 
-  <!-- Three.js (r128) via Cloudflare CDN -->
+  <!-- ======================================================================
+       PRIVACY POLICY & TERMS MODAL
+       ====================================================================== -->
+  <div id="legal-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+    <div class="modal-card legal-modal-card">
+      <button id="legal-close-btn" class="modal-close-btn" type="button" aria-label="Close Legal Information">✕</button>
+      <div id="legal-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Three.js (r128) via Cloudflare CDN for Subtle Ambient Backdrop -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- Application Script -->
