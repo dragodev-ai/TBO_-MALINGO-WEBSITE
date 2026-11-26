@@ -696,6 +696,10 @@ function initThreeScene() {
   // Interactive Raycaster for Hover & Click Reactions
   const raycaster = new THREE.Raycaster();
   const mouseNDC = new THREE.Vector2(-999, -999);
+  let targetMouseX = 0;
+  let targetMouseY = 0;
+  let curMouseX = 0;
+  let curMouseY = 0;
   let hoveredIcon = null;
 
   window.addEventListener('mousemove', (e) => {
@@ -1676,26 +1680,775 @@ function initSmoothScroll() {
   });
 }
 
-// --- Form Submission Feedback ---
+// --- Case Studies Data Catalog (Extracted from Malingo Portfolio 2026) ---
+const CASE_STUDIES_DATA = {
+  barwizard: {
+    id: 'barwizard',
+    discipline: 'PERFORMANCE MARKETING',
+    pageRef: 'PORTFOLIO 2026 · PAGE 05',
+    title: 'BarWizard',
+    meta: 'Bartending Education · Training · Consultancy',
+    lead: 'BarWizard has been working in the bartending space since 1996. Its offer spans professional academy training, bar consultancy, and event mixology.',
+    scope: 'Performance marketing for the April–June 2026 quarter, driving academy lead generation alongside multi-platform reach and community growth.',
+    asset: './CASE_STUDIES/barwizard.webp',
+    sectionHeading: 'The challenge behind the campaign.',
+    challenge: 'Prospective students exploring bartending are looking for a credible course, a practical craft, or a pathway into hospitality. The Q2 2026 campaign paired high-volume platform reach with direct academy enquiry conversion.',
+    steps: [
+      { no: '01', title: 'Make the offer legible', text: 'Bring the training and academy proposition forward so audiences immediately understand the next step.' },
+      { no: '02', title: 'Build attention at scale', text: 'Use multi-platform video and paid distribution to create visibility around a specialist hospitality category.' },
+      { no: '03', title: 'Connect attention to enquiry', text: 'Track lead volume alongside reach and views to ensure audience momentum translates into academy enquiries.' }
+    ],
+    workSummary: 'Full-funnel performance marketing across April–June 2026 combining high-reach creative distribution, audience growth, and lead capture for BarWizard’s bartending academy.',
+    opportunity: 'Converts category curiosity into direct academy enquiries while compounding long-term brand authority across social platforms.',
+    metrics: [
+      { val: '4.3M', label: 'Views · All Platforms' },
+      { val: '1.9M', label: 'Total Reach' },
+      { val: '+629', label: 'New Followers / Subscribers' },
+      { val: '102', label: 'Academy Leads' },
+      { val: '₹17,784', label: 'Ad Spend (INR)' }
+    ],
+    metricsNote: 'Portfolio-reported Q2 2026 campaign metrics (Malingo Portfolio 2026, page 5).',
+    related: ['neofit', 'livanto'],
+    goalOption: 'Performance Paid Ads Scaling (Meta / Google / TikTok)'
+  },
+  neofit: {
+    id: 'neofit',
+    discipline: 'PERFORMANCE MARKETING',
+    pageRef: 'PORTFOLIO 2026 · PAGE 06',
+    title: 'Neofit',
+    meta: 'Nutraceuticals · B&B Nutretia Health Supplements',
+    lead: 'Neofit is a nutritional health brand by B&B Nutretia offering targeted formulations across eye care, multivitamins, calcium, and vitamin D3.',
+    scope: 'Multi-platform performance marketing across Instagram and Facebook focused on qualified reach, link traffic, efficient CPM, and lead generation.',
+    asset: './CASE_STUDIES/neofit.webp',
+    sectionHeading: 'The challenge behind the campaign.',
+    challenge: 'With a supplement range spanning distinct wellness needs, Neofit needed creative and media targeting that connected each product line to the exact health need-state while maintaining lean acquisition costs.',
+    steps: [
+      { no: '01', title: 'Clarify product relevance', text: 'Align product communication with the specific nutritional need-state it serves.' },
+      { no: '02', title: 'Move from discovery to action', text: 'Build a seamless campaign funnel from broad reach to link clicks and lead capture.' },
+      { no: '03', title: 'Optimise to the useful signal', text: 'Balance blended cost per lead (₹47.26) and CPM (₹11.49) alongside click volume rather than vanity impressions alone.' }
+    ],
+    workSummary: 'Performance paid media across Instagram and Facebook delivering 6.5M reach, 25K link clicks, and 2,083 leads on ₹98,442 total ad spend.',
+    opportunity: 'Establishes a repeatable, low-CPM acquisition engine (₹11.49 overall CPM) capable of scaling D2C wellness product discovery and customer enquiries.',
+    metrics: [
+      { val: '6.5M', label: 'Reach · All Platforms' },
+      { val: '25K', label: 'Link Clicks' },
+      { val: '2,083', label: 'Leads Generated' },
+      { val: '₹47.26', label: 'Blended Cost / Lead' },
+      { val: '₹98,442', label: 'Ad Spend (INR)' },
+      { val: '₹11.49', label: 'Overall CPM' }
+    ],
+    metricsNote: 'Portfolio-reported campaign snapshot (Malingo Portfolio 2026, page 6).',
+    related: ['livanto', 'barwizard'],
+    goalOption: 'Performance Paid Ads Scaling (Meta / Google / TikTok)'
+  },
+  livanto: {
+    id: 'livanto',
+    discipline: 'PERFORMANCE MARKETING',
+    pageRef: 'PORTFOLIO 2026 · PAGE 07',
+    title: 'Livanto Green Infra',
+    meta: 'EV Charging Infrastructure · 30–240 kW Fast Chargers',
+    lead: 'Livanto Green Infra builds EV charging infrastructure including 30–240 kW fast chargers, charging management software, and turnkey support for homes, businesses, and fleets.',
+    scope: 'Performance marketing and high-volume lead generation targeting residential, commercial, and fleet EV charging buyers.',
+    asset: './CASE_STUDIES/livanto.webp',
+    sectionHeading: 'The challenge behind the campaign.',
+    challenge: 'EV charging infrastructure is a considered technical purchase where homeowners, commercial operators, and fleet managers evaluate different specs. The campaign translated technical charging hardware into clear enquiry hooks at ₹15.35 blended CPL.',
+    steps: [
+      { no: '01', title: 'Translate a technical offer', text: 'Make 30–240 kW charging hardware and software benefits instantly scannable.' },
+      { no: '02', title: 'Segment by real use case', text: 'Connect creatives directly to home, commercial business, and fleet charging requirements.' },
+      { no: '03', title: 'Scale an efficient enquiry engine', text: 'Pair high lead volume (3,943 leads) with disciplined spend efficiency (₹15.35 blended CPL).' }
+    ],
+    workSummary: 'Performance lead-generation campaigns delivering 3,943 leads at ₹15.35 blended cost per lead from ₹60,523 ad spend and 408K total reach.',
+    opportunity: 'Creates an affordable, high-intent pipeline of B2B, commercial, and residential EV infrastructure enquiries ready for sales qualification.',
+    metrics: [
+      { val: '408K', label: 'Total Reach' },
+      { val: '3,943', label: 'Leads Generated' },
+      { val: '₹15.35', label: 'Blended Cost / Lead' },
+      { val: '₹60,523', label: 'Ad Spend (INR)' }
+    ],
+    metricsNote: 'Portfolio-reported campaign snapshot (Malingo Portfolio 2026, page 7).',
+    related: ['neofit', 'barwizard'],
+    goalOption: 'Performance Paid Ads Scaling (Meta / Google / TikTok)'
+  },
+  paytm: {
+    id: 'paytm',
+    discipline: 'SOCIAL MEDIA · CONTENT WRITING',
+    pageRef: 'PORTFOLIO 2026 · PAGE 09',
+    title: 'Paytm',
+    meta: 'Financial Technology · Consumer & Merchant Services',
+    lead: 'Paytm speaks simultaneously to everyday consumers making digital payments and merchants relying on Soundbox, UPI, and financial tools. Malingo crafted social media content writing across Instagram and Facebook.',
+    scope: 'Social media content writing for Instagram and Facebook across consumer and merchant digital payment propositions.',
+    asset: './CASE_STUDIES/paytm.webp',
+    sectionHeading: 'The brand, its audience, and its voice.',
+    challenge: 'Serving both mass-market consumers and business merchants requires simplifying complex financial features into clear, instantly recognisable social posts without diluting trust.',
+    steps: [
+      { no: '01', title: 'Simplify complex services', text: 'Translate payment and financial product utilities into crisp, accessible social storytelling.' },
+      { no: '02', title: 'Keep the voice unmistakable', text: 'Maintain a cohesive brand tone across Instagram and Facebook formats.' },
+      { no: '03', title: 'Give every post a clear job', text: 'Balance feature education, merchant utility, and ongoing top-of-mind brand recall.' }
+    ],
+    workSummary: 'Social media content writing across Instagram and Facebook supporting Paytm’s consumer and merchant product ecosystem.',
+    opportunity: 'Strengthens feature clarity, service discovery, and consistent everyday brand recall across India’s largest digital payment channels.',
+    related: ['mufin', 'intrend'],
+    goalOption: 'Full Agency Retainer (All-In-One Domination)'
+  },
+  mufin: {
+    id: 'mufin',
+    discipline: 'SOCIAL MEDIA MARKETING',
+    pageRef: 'PORTFOLIO 2026 · PAGE 10',
+    title: 'Mufin Green Finance',
+    meta: 'Green Finance · Publicly Listed EV & Solar Financing',
+    lead: 'Mufin Green Finance sits at the intersection of listed NBFC finance and clean mobility, powering EV and solar infrastructure financing across India.',
+    scope: 'Multi-platform social media marketing spanning LinkedIn, Instagram, and Facebook.',
+    asset: './CASE_STUDIES/mufin.webp',
+    sectionHeading: 'The brand, its audience, and its voice.',
+    challenge: 'Green financing combines institutional credibility with emerging climate-tech narratives. Malingo tailored messaging across LinkedIn for corporate/investor stakeholders and Instagram/Facebook for broader clean-energy awareness.',
+    steps: [
+      { no: '01', title: 'Build category understanding', text: 'Explain what EV and solar financing unlocks using clear, jargon-free language.' },
+      { no: '02', title: 'Adapt by platform behaviour', text: 'Tailor LinkedIn for B2B & institutional credibility while keeping Instagram and Facebook engaging and accessible.' },
+      { no: '03', title: 'Sustain clean-tech leadership', text: 'Keep Mufin’s role in India’s clean-energy transition consistently visible.' }
+    ],
+    workSummary: 'End-to-end social media marketing across LinkedIn, Instagram, and Facebook for a ₹1700+ Cr publicly listed green finance leader.',
+    opportunity: 'Positions Mufin as a trusted category authority for EV fleets, solar partners, and green-finance investors alike.',
+    related: ['paytm', 'colourvalley'],
+    goalOption: 'Full Agency Retainer (All-In-One Domination)'
+  },
+  intrend: {
+    id: 'intrend',
+    discipline: 'SOCIAL MEDIA MARKETING',
+    pageRef: 'PORTFOLIO 2026 · PAGE 11',
+    title: 'Intrend Colours',
+    meta: 'Cosmetics · Accessible Beauty',
+    lead: 'Intrend Colours offers an expansive cosmetics range built around vibrant shades, matte finishes, and an accessible everyday price point.',
+    scope: 'Social media marketing across Instagram and Facebook focused on shade discovery and visual brand recognition.',
+    asset: './CASE_STUDIES/intrend.webp',
+    sectionHeading: 'The brand, its audience, and its voice.',
+    challenge: 'In beauty and cosmetics, buyers notice shade payoff and finish before reading a single line of copy. The social grid needed repeatable formats that spotlighted 30+ SKUs while keeping the feed cohesive.',
+    steps: [
+      { no: '01', title: 'Lead with the product & shade', text: 'Make colour payoff, finishes, and textures the immediate focal point of every frame.' },
+      { no: '02', title: 'Turn catalogue breadth into discovery', text: 'Use structured visual formats so shoppers easily navigate lip colours, primers, and fixers.' },
+      { no: '03', title: 'Build a recognisable beauty grid', text: 'Maintain one signature visual language across Instagram and Facebook without visual fatigue.' }
+    ],
+    workSummary: 'Product-led social media marketing across Instagram and Facebook showcasing Intrend Colours’ cosmetics range.',
+    opportunity: 'Drives rapid shade discovery, feed saves, and D2C/marketplace brand recall across high-frequency beauty audiences.',
+    related: ['colourvalley', 'jovees'],
+    goalOption: 'Viral Short-Form Video & Reel Production'
+  },
+  colourvalley: {
+    id: 'colourvalley',
+    discipline: 'SOCIAL MEDIA MARKETING',
+    pageRef: 'PORTFOLIO 2026 · PAGE 12',
+    title: 'Colour Valley India',
+    meta: 'Paints · Primers · Wall Care',
+    lead: 'Colour Valley India manufactures interior and exterior paints, primers, and protective wall-care formulations built around colour vibrancy and durability.',
+    scope: 'Social media marketing across Instagram and Facebook highlighting product performance and finishes.',
+    asset: './CASE_STUDIES/colourvalley.webp',
+    sectionHeading: 'The brand, its audience, and its voice.',
+    challenge: 'Technical paint and primer benefits only click when homeowners, contractors, and dealers can picture the finished surface. Creative direction turned formulations into tangible visual transformations.',
+    steps: [
+      { no: '01', title: 'Make technical benefits visible', text: 'Translate washability, weather shielding, and damp-coat protection into visual stories.' },
+      { no: '02', title: 'Show finishes in real spaces', text: 'Use bold colour palettes and architectural context so buyers imagine the final wall finish.' },
+      { no: '03', title: 'Keep the catalogue coherent', text: 'Unify Euro White, Damp Wall Coat, and luxury Metallica ranges under one consistent identity.' }
+    ],
+    workSummary: 'Ongoing social media marketing across Instagram and Facebook supporting brand awareness and product education.',
+    opportunity: 'Builds dealer confidence and homeowner preference across residential and commercial paint categories.',
+    related: ['intrend', 'malee'],
+    goalOption: 'Full Agency Retainer (All-In-One Domination)'
+  },
+  starfox: {
+    id: 'starfox',
+    discipline: 'BRANDING · SOCIAL MEDIA · OUTDOOR DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGES 13 & 16',
+    title: 'Starfox Fashion',
+    meta: 'Men’s Fashion · Contemporary Apparel (Ludhiana)',
+    lead: 'Based in Ludhiana, Starfox Fashion is a contemporary men’s apparel label with a customer base exceeding 100,000. Malingo worked across both its visual brand system and digital social channels.',
+    scope: 'Logo design, comprehensive brand guidelines, outdoor advertising, and social media marketing across Instagram and Facebook.',
+    asset: './CASE_STUDIES/starfox_brand.webp',
+    sectionHeading: 'Giving the brand one unmistakable identity.',
+    challenge: 'Fast-growing apparel labels lose equity when billboards, retail tags, and Instagram feeds look disconnected. Malingo aligned Starfox’s logo, outdoor hoardings, and social creative into one cohesive brand system.',
+    steps: [
+      { no: '01', title: 'Establish a recognisable identity', text: 'Anchor brand recall with a crisp logo system and repeatable brand guidelines.' },
+      { no: '02', title: 'Carry identity into physical spaces', text: 'Extend the visual language cleanly into high-impact outdoor advertising.' },
+      { no: '03', title: 'Keep the brand active on social', text: 'Translate seasonal drops and menswear styling into channel-native Instagram and Facebook content.' }
+    ],
+    workSummary: 'Integrated branding and digital scope spanning logo design, brand guidelines, outdoor advertising, and social media marketing.',
+    opportunity: 'Ensures brand recognition compounds seamlessly whether a buyer sees a highway hoarding or an Instagram reel.',
+    metrics: [
+      { val: '100K+', label: 'Brand Customer Base' },
+      { val: '360°', label: 'Identity + OOH + Social' }
+    ],
+    metricsNote: '100,000+ customer context as cited in Malingo Portfolio 2026 (pages 13 & 16).',
+    related: ['malee', 'lytage'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  malee: {
+    id: 'malee',
+    discipline: 'BRAND IDENTITY · OUTDOOR DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 15',
+    title: 'Malee',
+    meta: 'Gardening & Eco-Living',
+    lead: 'Malee is a modern gardening and eco-living brand. Malingo built its visual identity system from the ground up — covering logo design, brand guidelines, and outdoor advertising.',
+    scope: 'Logo design, comprehensive brand guidelines, and outdoor advertising.',
+    asset: './CASE_STUDIES/malee.webp',
+    sectionHeading: 'Building an identity rooted in everyday clarity.',
+    challenge: 'In a tactile category centred on plants and home gardens, the brand needed a friendly, structured visual identity practical enough to scale cleanly from digital touchpoints to highway billboards.',
+    steps: [
+      { no: '01', title: 'Create the identity foundation', text: 'Craft a fresh, memorable logo mark built for immediate category recognition.' },
+      { no: '02', title: 'Codify brand guidelines', text: 'Define typography, colour rules, and application standards so every future asset stays consistent.' },
+      { no: '03', title: 'Build physical outdoor visibility', text: 'Apply the brand cleanly to outdoor billboards and signage beyond digital screens.' }
+    ],
+    workSummary: 'Complete visual identity foundation including logo design, brand guidelines, and outdoor advertising.',
+    opportunity: 'Equips Malee with a durable, scalable brand toolkit that drives instant recognition across physical and digital channels.',
+    related: ['starfox', 'lytage'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  lytage: {
+    id: 'lytage',
+    discipline: 'COMPLETE BRAND DESIGN · OUTDOOR DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 17',
+    title: 'Lytage',
+    meta: 'Consumer Electronics',
+    lead: 'Lytage operates in consumer electronics. Malingo delivered a complete brand design system spanning logo architecture, brand guidelines, and transit/outdoor advertising.',
+    scope: 'Complete brand design, logo design, outdoor advertising, and corporate brand guidelines.',
+    asset: './CASE_STUDIES/lytage.webp',
+    sectionHeading: 'Engineering coherence across every brand touchpoint.',
+    challenge: 'Electronics brands must signal precision and reliability across hardware boxes, retail spaces, and outdoor transit media. Malingo built a sharp geometric system engineered for repeatability.',
+    steps: [
+      { no: '01', title: 'Build the visual foundation', text: 'Design a modern geometric logo and cohesive brand mark tailored for electronics.' },
+      { no: '02', title: 'Create rules for consistency', text: 'Establish brand guidelines so packaging, collateral, and digital ads speak one visual language.' },
+      { no: '03', title: 'Translate identity into outdoor impact', text: 'Deploy the system across transit shelters and outdoor media for high-visibility recall.' }
+    ],
+    workSummary: 'End-to-end brand creation including complete brand design, logo, outdoor advertising, and brand guidelines.',
+    opportunity: 'Gives Lytage an enterprise-ready visual foundation that accelerates product launches and retail trust.',
+    related: ['starfox', 'malee'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  california: {
+    id: 'california',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 19',
+    title: 'California Nuts',
+    meta: 'Food · Packaged California Almonds (Chougan)',
+    lead: 'For California Nuts, Malingo designed the California Almonds pouch under the Chougan mark — placing the product name front and centre with natural appetite cues.',
+    scope: 'Retail food packaging design engineered for instant shelf legibility.',
+    asset: './CASE_STUDIES/pack_california.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'Dry-fruit aisles are crowded and fast-scanned. The pack had to establish purity, quality, and almond imagery at arm’s length before a shopper reads the fine print.',
+    steps: [
+      { no: '01', title: 'Make the product unmistakable', text: 'Prioritise brand and product naming for split-second shelf identification.' },
+      { no: '02', title: 'Lead with appetite & natural cues', text: 'Use crisp almond photography and wholesome tones to reinforce freshness.' },
+      { no: '03', title: 'Create strong shelf distinction', text: 'Anchor the pouch with a confident colour field and disciplined typographic hierarchy.' }
+    ],
+    workSummary: 'Retail pouch packaging design featured in Malingo’s food-category packaging showcase.',
+    opportunity: 'Wins the crucial three-second shelf decision through clear hierarchy and premium freshness cues.',
+    related: ['godesi', 'mithai'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  godesi: {
+    id: 'godesi',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 19',
+    title: 'Go Desi',
+    meta: 'Food & Beverages · Desi Popz (Kaccha Aam)',
+    lead: 'Go Desi Desi Popz brings the tangy Kaccha Aam flavour straight to the front of the pack with an unmistakably legible ₹5 impulse price callout.',
+    scope: 'Small-format FMCG pouch packaging design for high-velocity retail shelves.',
+    asset: './CASE_STUDIES/pack_godesi.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'At a ₹5 impulse price point, a small-format snack pack has milliseconds to convey bold Indian flavour personality and affordability in crowded kirana and modern retail counters.',
+    steps: [
+      { no: '01', title: 'Lead with the product name', text: 'Make Desi Popz the boldest visual anchor on the small-format sachet.' },
+      { no: '02', title: 'Signal flavour immediately', text: 'Use a vivid raw-mango green field and unmistakable Kaccha Aam visual cues.' },
+      { no: '03', title: 'Accelerate impulse purchase', text: 'Highlight the ₹5 price point cleanly without cluttering the pack personality.' }
+    ],
+    workSummary: 'FMCG confectionery packaging design built for instant impulse recognition.',
+    opportunity: 'Maximises counter visibility and split-second flavour recognition for rapid retail trial.',
+    related: ['california', 'jovees'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  mithai: {
+    id: 'mithai',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 19',
+    title: 'Mithai Magic',
+    meta: 'Restaurants · Food Service Takeaway',
+    lead: 'For Mithai Magic, Malingo designed a distinctive branded sleeve for takeaway food containers — extending the hospitality experience beyond the counter.',
+    scope: 'Food-service takeaway container sleeve and packaging design.',
+    asset: './CASE_STUDIES/pack_mithai.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'For sweet shops and food-service brands, most customers experience the product at home or when gifting. A generic container wastes the strongest brand touchpoint.',
+    steps: [
+      { no: '01', title: 'Carry the brand past the counter', text: 'Keep the Mithai Magic identity prominent throughout delivery and unboxing.' },
+      { no: '02', title: 'Elevate a practical format', text: 'Turn a functional takeaway box into a crisp, gift-worthy branded carrier.' },
+      { no: '03', title: 'Build repeat recognition', text: 'Make every order reinforce brand warmth and dining recall.' }
+    ],
+    workSummary: 'Branded takeaway sleeve packaging design for Mithai Magic food-service containers.',
+    opportunity: 'Transforms every takeaway and delivery order into a memorable physical brand touchpoint.',
+    related: ['veghouse', 'godesi'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  veghouse: {
+    id: 'veghouse',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 20',
+    title: 'Veg House',
+    meta: 'Restaurants · Multi-Format Food Packaging',
+    lead: 'Veg House spans multiple takeaway container shapes unified by one cohesive visual system and the signature tagline “Where every flavour tells a story.”',
+    scope: 'Multi-format restaurant takeaway packaging system across bowls and boxes.',
+    asset: './CASE_STUDIES/pack_veghouse.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'Delivery orders rarely ship in a single box size. Veg House needed a flexible packaging architecture that looked unmistakably unified across every bowl, tub, and carton.',
+    steps: [
+      { no: '01', title: 'Create a signature pack language', text: 'Anchor the range with consistent brand marks and the core flavour tagline.' },
+      { no: '02', title: 'Adapt cleanly across formats', text: 'Scale the identity across different container shapes and colour accents.' },
+      { no: '03', title: 'Deliver a cohesive unboxing', text: 'Ensure multi-item orders arrive feeling like one polished culinary brand.' }
+    ],
+    workSummary: 'Multi-container packaging family created for Veg House restaurant & delivery formats.',
+    opportunity: 'Raises perceived food quality and reinforces brand recall across aggregators and direct orders.',
+    related: ['mithai', 'california'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  jovees: {
+    id: 'jovees',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 20',
+    title: 'Jovees',
+    meta: 'Cosmetics & Skincare · Sun Shield Protective Lotion',
+    lead: 'Jovees Premium Sun Shield Protective Lotion balances clean dermatological credibility with effortless scannability of SPF 40 and PA sun-protection details.',
+    scope: 'Skincare box and lotion packaging design for Jovees Premium.',
+    asset: './CASE_STUDIES/pack_jovees.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'Skincare buyers demand both premium aesthetic trust and immediate functional clarity on SPF rating and protection spectrum.',
+    steps: [
+      { no: '01', title: 'Lead with product purpose', text: 'Make Sun Shield Protective Lotion immediately scannable in crowded skincare aisles.' },
+      { no: '02', title: 'Highlight clinical protection cues', text: 'Give SPF 40 and PA ratings a crisp, structured place in the front hierarchy.' },
+      { no: '03', title: 'Maintain refined premium restraint', text: 'Use clean typography and balanced colour systems worthy of the Jovees Premium line.' }
+    ],
+    workSummary: 'Cosmetics & skincare packaging design for Jovees Premium Sun Shield Protective Lotion.',
+    opportunity: 'Elevates shelf credibility and accelerates buyer confidence in high-competition skincare retail.',
+    related: ['pulp', 'california'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  pulp: {
+    id: 'pulp',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 20',
+    title: 'Pulp',
+    meta: 'Skincare & Personal Care · Coffee & Love Scrub',
+    lead: 'Pulp Coffee & Love breaks away from predictable clinical skincare whites with a bold dark matte pouch and high-contrast pink graphic typography.',
+    scope: 'D2C skincare spout-pouch packaging design for Pulp Coffee & Cacao Scrub.',
+    asset: './CASE_STUDIES/pack_pulp.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'Modern Gen-Z skincare lives equally on retail shelves and Instagram unboxings. Pulp needed an iconic visual code that stood out instantly against minimalist pastel competitors.',
+    steps: [
+      { no: '01', title: 'Build a category-breaking visual code', text: 'Pair a deep matte dark pouch with electric pink typography for instant visual contrast.' },
+      { no: '02', title: 'Fuse name and ingredients', text: 'Make Coffee & Love and the coffee-and-cacao scrub benefit part of one memorable story.' },
+      { no: '03', title: 'Design a scalable brand asset', text: 'Create a distinctive pouch template ready to extend across future Pulp SKUs.' }
+    ],
+    workSummary: 'Distinctive pouch packaging design for Pulp Coffee & Cacao Scrub.',
+    opportunity: 'Drives instant social shareability, unboxing delight, and unmistakable brand differentiation.',
+    related: ['jovees', 'godesi'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  bharat: {
+    id: 'bharat',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 21',
+    title: 'Bharat Certis',
+    meta: 'Agriculture & Crop Care · Vestar (Paclobutrazole 40% SC)',
+    lead: 'The Bharat Certis spread features Vestar, a Paclobutrazole 40% SC plant growth regulator designed for crisp technical clarity across rural and dealer distribution.',
+    scope: 'Technical agri-science product packaging design for Vestar.',
+    asset: './CASE_STUDIES/pack_bharat.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'In crop protection and agriculture, clarity prevents costly misuse. Dealers and farmers need the product name, active formulation, and category unmistakable at a glance.',
+    steps: [
+      { no: '01', title: 'Prioritise technical legibility', text: 'Present Vestar and Paclobutrazole 40% SC with zero visual ambiguity.' },
+      { no: '02', title: 'Structure information hierarchy', text: 'Position the plant growth regulator classification cleanly for rapid counter reference.' },
+      { no: '03', title: 'Build durable shelf recognition', text: 'Frame the pack with a distinct visual structure that reinforces multinational brand authority.' }
+    ],
+    workSummary: 'Specialist agricultural packaging design for Bharat Certis AgriScience’s Vestar formulation.',
+    opportunity: 'Improves dealer recall and buyer confidence across pan-India rural and regional agri-markets.',
+    related: ['dyazo', 'incase'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  dyazo: {
+    id: 'dyazo',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 21',
+    title: 'Dyazo',
+    meta: 'PC & Mobile Hardware · Medusa Keyboard & Mouse Combo',
+    lead: 'Dyazo Medusa is a gaming keyboard-and-mouse combo box that places both hardware pieces cleanly in view so shoppers immediately know what is inside.',
+    scope: 'Consumer hardware box packaging design for Dyazo Medusa combo.',
+    asset: './CASE_STUDIES/pack_dyazo.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'Tech accessory buyers compare boxes rapidly online and in-store. The packaging had to showcase the full combo hardware and gaming aesthetic clearly without visual clutter.',
+    steps: [
+      { no: '01', title: 'Show what is inside immediately', text: 'Put crisp imagery of both the keyboard and mouse front and centre.' },
+      { no: '02', title: 'Establish gaming-grade presence', text: 'Pair bold contrast with a clear hierarchy for the Medusa product identity.' },
+      { no: '03', title: 'Support rapid spec comparison', text: 'Keep core hardware callouts clean and scannable on the primary face.' }
+    ],
+    workSummary: 'Retail & e-commerce hardware box packaging for the Dyazo Medusa keyboard-and-mouse combo.',
+    opportunity: 'Strengthens click-through visual impact on marketplaces and immediate comprehension on retail shelves.',
+    related: ['incase', 'bharat'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  },
+  incase: {
+    id: 'incase',
+    discipline: 'PACKAGING DESIGN',
+    pageRef: 'PORTFOLIO 2026 · PAGE 21',
+    title: 'Incase',
+    meta: 'B2B Service · Message-Led Proposition Packaging',
+    lead: 'Incase takes a sharp message-led packaging approach: a bold blue box carrying the headline “Increase Project Speed By Months At Zero Extra Cost.”',
+    scope: 'Conceptual message-led B2B service proposition packaging design.',
+    asset: './CASE_STUDIES/pack_incase.webp',
+    sectionHeading: 'What the product needs its pack to say.',
+    challenge: 'Intangible B2B services are hard to make memorable. Using physical packaging as a tactile billboard turns a core business promise into something stakeholders hold and remember.',
+    steps: [
+      { no: '01', title: 'Lead with the value proposition', text: 'Make the core speed-and-cost business promise the unmistakable headline.' },
+      { no: '02', title: 'Visualise forward momentum', text: 'Use clean directional structure and confident colour hierarchy to reinforce progress.' },
+      { no: '03', title: 'Make the promise tactile', text: 'Turn the physical box into a memorable conversation starter for decision-makers.' }
+    ],
+    workSummary: 'Specialist message-led packaging design turning a B2B service proposition into a tangible brand artefact.',
+    opportunity: 'Elevates pitch recall and differentiates B2B service communications from standard digital slide decks.',
+    related: ['dyazo', 'bharat'],
+    goalOption: '3D Brand Identity, Packaging & Visual Overhaul'
+  }
+};
+
+// --- Interactive Case Study Modal & Fullscreen Portfolio Lightbox ---
+function initCaseStudiesAndLightbox() {
+  const modalOverlay = document.getElementById('case-modal-overlay');
+  const modalScroll = document.getElementById('case-modal-scroll');
+  const modalDiscipline = document.getElementById('case-modal-discipline');
+  const modalCloseBtn = document.getElementById('case-modal-close');
+
+  const lightbox = document.getElementById('portfolio-lightbox');
+  const lbImg = document.getElementById('portfolio-lightbox-img');
+  const lbCaption = document.getElementById('portfolio-lightbox-caption');
+  const lbClose = document.getElementById('lightbox-close-btn');
+
+  function openLightbox(src, caption) {
+    if (!lightbox || !lbImg || !src) return;
+    lbImg.src = src;
+    if (lbCaption) lbCaption.textContent = caption || 'Malingo Portfolio 2026';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    if (sound && sound.playPop) sound.playPop(640, 0.06);
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    if (lbImg) lbImg.removeAttribute('src');
+    if (!modalOverlay || modalOverlay.hidden) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.querySelectorAll('[data-lightbox]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openLightbox(el.getAttribute('data-lightbox'), el.getAttribute('data-caption'));
+    });
+  });
+
+  if (lbClose) lbClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  function renderCaseModal(cs) {
+    if (!modalScroll || !modalDiscipline) return;
+    modalDiscipline.textContent = `MALINGO CASE FILE  /  ${cs.discipline}`;
+
+    const stepsHtml = (cs.steps || []).map((s) => `
+      <article class="case-modal-step">
+        <span>${s.no}</span>
+        <h4>${s.title}</h4>
+        <p>${s.text}</p>
+      </article>
+    `).join('');
+
+    const metricsHtml = cs.metrics && cs.metrics.length ? `
+      <div class="case-modal-metrics-box">
+        <div class="case-modal-kicker" style="margin-bottom: 0;">PORTFOLIO-REPORTED SNAPSHOT</div>
+        <div class="case-modal-metrics-grid">
+          ${cs.metrics.map((m) => `
+            <div class="case-modal-metric">
+              <strong>${m.val}</strong>
+              <span>${m.label}</span>
+            </div>
+          `).join('')}
+        </div>
+        ${cs.metricsNote ? `<p class="case-modal-metrics-note">${cs.metricsNote}</p>` : ''}
+      </div>
+    ` : '';
+
+    const relatedHtml = (cs.related || []).map((rid) => {
+      const rel = CASE_STUDIES_DATA[rid];
+      if (!rel) return '';
+      return `<button type="button" class="case-related-btn" data-case-open-inline="${rel.id}">${rel.title} ↗</button>`;
+    }).join('');
+
+    modalScroll.innerHTML = `
+      <div class="case-modal-hero">
+        <div class="case-modal-hero-copy">
+          <div class="case-modal-kicker">THE WORK  /  ${cs.pageRef}</div>
+          <h2 id="case-modal-title">${cs.title}</h2>
+          <div class="case-modal-sector">${cs.meta}</div>
+          <p class="case-modal-lead">${cs.lead}</p>
+          <div class="case-modal-scope">
+            <span>DOCUMENTED SCOPE</span>
+            <p>${cs.scope}</p>
+          </div>
+        </div>
+        <div class="case-modal-hero-visual" id="case-hero-zoom-trigger">
+          <img src="${cs.asset}" alt="${cs.title} portfolio artwork">
+        </div>
+      </div>
+
+      <div class="case-modal-body">
+        <div class="case-modal-section-head">
+          <div class="case-modal-kicker">STRATEGIC BREAKDOWN</div>
+          <h3>${cs.sectionHeading}</h3>
+          <p>${cs.challenge}</p>
+        </div>
+
+        <div class="case-modal-steps">${stepsHtml}</div>
+
+        ${metricsHtml}
+
+        <div class="case-modal-duo">
+          <article class="case-modal-card">
+            <span>THE WORK MALINGO TOOK ON</span>
+            <h4>Execution Scope</h4>
+            <p>${cs.workSummary}</p>
+          </article>
+          <article class="case-modal-card highlight">
+            <span>BUSINESS IMPACT &amp; OPPORTUNITY</span>
+            <h4>Why This Matters for Growth</h4>
+            <p>${cs.opportunity}</p>
+          </article>
+        </div>
+
+        ${relatedHtml ? `
+          <div class="case-modal-related">
+            <div class="case-modal-kicker" style="margin-bottom: 0;">KEEP EXPLORING</div>
+            <h4>More Case Studies from Malingo × TBO</h4>
+            <div class="case-modal-related-links">${relatedHtml}</div>
+          </div>
+        ` : ''}
+
+        <div class="case-modal-footer">
+          <button type="button" class="btn-cta" id="case-cta-contact">
+            <span>Build Similar Results for Your Brand</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button type="button" class="case-modal-close" id="case-footer-close">Back to Portfolio ↑</button>
+        </div>
+      </div>
+    `;
+
+    modalScroll.scrollTop = 0;
+
+    // Wire zoom on hero artwork
+    const heroZoom = document.getElementById('case-hero-zoom-trigger');
+    if (heroZoom) {
+      heroZoom.addEventListener('click', () => openLightbox(cs.asset, `${cs.title} · ${cs.discipline} (${cs.pageRef})`));
+    }
+
+    // Wire inline related buttons
+    modalScroll.querySelectorAll('[data-case-open-inline]').forEach((b) => {
+      b.addEventListener('click', () => openCaseModal(b.getAttribute('data-case-open-inline'), true));
+    });
+
+    // Wire footer close & CTA to Contact form
+    const footerClose = document.getElementById('case-footer-close');
+    if (footerClose) footerClose.addEventListener('click', () => closeCaseModal(true));
+
+    const ctaContact = document.getElementById('case-cta-contact');
+    if (ctaContact) {
+      ctaContact.addEventListener('click', () => {
+        closeCaseModal(false);
+        const selectEl = document.getElementById('client-service');
+        if (selectEl && cs.goalOption) selectEl.value = cs.goalOption;
+        const contactEl = document.getElementById('contact');
+        if (contactEl) contactEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  }
+
+  function openCaseModal(id, pushHash) {
+    const cs = CASE_STUDIES_DATA[id];
+    if (!cs || !modalOverlay) return;
+    renderCaseModal(cs);
+    modalOverlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    if (sound && sound.playPop) sound.playPop(700, 0.08);
+
+    if (pushHash && location.hash !== `#case-${id}`) {
+      try {
+        history.pushState({ caseId: id }, '', `#case-${id}`);
+      } catch (err) {
+        location.hash = `#case-${id}`;
+      }
+    }
+  }
+
+  function closeCaseModal(restoreHash = true) {
+    if (!modalOverlay || modalOverlay.hidden) return;
+    modalOverlay.hidden = true;
+    document.body.style.overflow = '';
+    if (restoreHash && location.hash.startsWith('#case-')) {
+      try {
+        history.replaceState(null, '', location.pathname + location.search + '#work');
+      } catch (err) {
+        location.hash = '#work';
+      }
+    }
+  }
+
+  document.querySelectorAll('[data-case-open]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openCaseModal(btn.getAttribute('data-case-open'), true);
+    });
+  });
+
+  // Also allow clicking the content body of a case study card to open its case file
+  document.querySelectorAll('.case-work-card').forEach((card) => {
+    const btn = card.querySelector('[data-case-open]');
+    if (!btn) return;
+    const caseId = btn.getAttribute('data-case-open');
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('[data-lightbox]') || e.target.closest('button')) return;
+      openCaseModal(caseId, true);
+    });
+  });
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', () => closeCaseModal(true));
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeCaseModal(true);
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (lightbox && !lightbox.hidden) {
+        closeLightbox();
+      } else if (modalOverlay && !modalOverlay.hidden) {
+        closeCaseModal(true);
+      }
+    }
+  });
+
+  function syncFromHash() {
+    const m = location.hash.match(/^#case-([a-z0-9-]+)$/i);
+    if (m && CASE_STUDIES_DATA[m[1].toLowerCase()]) {
+      openCaseModal(m[1].toLowerCase(), false);
+    } else if (modalOverlay && !modalOverlay.hidden) {
+      closeCaseModal(false);
+    }
+  }
+
+  window.addEventListener('hashchange', syncFromHash);
+  window.addEventListener('popstate', syncFromHash);
+  syncFromHash();
+}
+
+// --- Form Submission (Real Email Dispatch to Malingo & TBO via Netlify Forms) ---
 function initContactForm() {
   const form = document.getElementById('growth-audit-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    sound.playChime();
-    const btn = form.querySelector('button[type="submit"]');
-    const origText = btn.innerHTML;
-    btn.innerHTML = '✓ Audit Request Dispatched! Aryaman (POC) will connect within 15 min';
-    btn.style.background = '#10B981';
-    btn.style.borderColor = '#34D399';
+  const statusEl = document.getElementById('form-status-msg');
+  const sourceInput = document.getElementById('form-source-page');
 
-    setTimeout(() => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const origHtml = btn ? btn.innerHTML : '';
+
+    if (sourceInput) {
+      sourceInput.value = window.location.href;
+    }
+
+    if (statusEl) {
+      statusEl.hidden = true;
+      statusEl.className = 'form-status-msg';
+    }
+
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin" style="color:#fff;"></i> <span class="btn-text">Sending to Malingo &amp; TBO Desk...</span>';
+    }
+
+    const formData = new FormData(form);
+    if (!formData.get('form-name')) {
+      formData.set('form-name', form.getAttribute('name') || 'growth-audit');
+    }
+
+    const bodyEncoded = new URLSearchParams(formData).toString();
+    const isNetlifyHost = /(^|\.)malingo\.in$|netlify\.app$/i.test(window.location.hostname);
+    const endpoint = isNetlifyHost ? '/' : 'https://malingo.in/';
+
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: bodyEncoded
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+
+      if (sound && sound.playChime) sound.playChime();
+
+      if (btn) {
+        btn.innerHTML = '✓ Dispatched to Malingo &amp; TBO Email Desks!';
+        btn.style.background = '#10B981';
+        btn.style.borderColor = '#34D399';
+      }
+
+      if (statusEl) {
+        statusEl.className = 'form-status-msg is-success';
+        statusEl.innerHTML = '<strong>Request Sent!</strong> Your brief has been emailed to <strong>kushagra@malingo.in</strong> &amp; <strong>info@thebrandoutreach.in</strong>. Aryaman (Operations POC) will connect within 15 minutes.';
+        statusEl.hidden = false;
+      }
+
       form.reset();
-      btn.innerHTML = origText;
-      btn.style.background = '';
-      btn.style.borderColor = '';
-    }, 4500);
+
+      setTimeout(() => {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = origHtml;
+          btn.style.background = '';
+          btn.style.borderColor = '';
+        }
+      }, 5000);
+    } catch (err) {
+      console.error('[ContactForm] Submission error:', err);
+      const nameVal = formData.get('client_name') || '';
+      const contactVal = formData.get('client_contact') || '';
+      const goalVal = formData.get('growth_goal') || '';
+      const detailsVal = formData.get('brand_details') || '';
+      const mailSubject = encodeURIComponent(`[Malingo × TBO] Growth Audit Request — ${nameVal}`);
+      const mailBody = encodeURIComponent(
+        `Name / Company: ${nameVal}\nEmail / WhatsApp: ${contactVal}\nPrimary Growth Goal: ${goalVal}\n\nBrand & Targets:\n${detailsVal}`
+      );
+      const mailtoHref = `mailto:kushagra@malingo.in,info@thebrandoutreach.in?subject=${mailSubject}&body=${mailBody}`;
+
+      if (statusEl) {
+        statusEl.className = 'form-status-msg is-error';
+        statusEl.innerHTML = `Could not auto-send right now. <a href="${mailtoHref}">Click here to send directly via email to kushagra@malingo.in &amp; info@thebrandoutreach.in</a>.`;
+        statusEl.hidden = false;
+      }
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = origHtml;
+      }
+    }
   });
 }
 
@@ -1704,28 +2457,32 @@ function initPortfolioFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.work-card');
 
-  filterBtns.forEach(btn => {
+  filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      filterBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      sound.playPop(720, 0.08);
+      if (sound && sound.playPop) sound.playPop(720, 0.08);
 
       const filterVal = btn.getAttribute('data-filter');
 
-      cards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterVal === 'all' || category === filterVal || category.includes(filterVal)) {
+      cards.forEach((card) => {
+        const categories = (card.getAttribute('data-category') || '').split(/\s+/);
+        const show = filterVal === 'all' || categories.includes(filterVal);
+        if (show) {
           card.style.display = 'flex';
-          setTimeout(() => {
+          requestAnimationFrame(() => {
             card.style.opacity = '1';
             card.style.transform = 'scale(1)';
-          }, 50);
+          });
         } else {
           card.style.opacity = '0';
-          card.style.transform = 'scale(0.9)';
+          card.style.transform = 'scale(0.94)';
           setTimeout(() => {
-            card.style.display = 'none';
-          }, 300);
+            const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter');
+            if (activeFilter !== 'all' && !categories.includes(activeFilter)) {
+              card.style.display = 'none';
+            }
+          }, 220);
         }
       });
     });
@@ -1780,7 +2537,8 @@ function initAllModules() {
     ['AudioButton', initAudioButton],
     ['SmoothScroll', initSmoothScroll],
     ['ContactForm', initContactForm],
-    ['PortfolioFilters', initPortfolioFilters]
+    ['PortfolioFilters', initPortfolioFilters],
+    ['CaseStudiesAndLightbox', initCaseStudiesAndLightbox]
   ];
 
   initializers.forEach(([name, fn]) => {
