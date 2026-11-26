@@ -5701,6 +5701,9 @@ html.light-theme .staff-modal-photo {
 html.light-theme .footer-back-top {
   color: #B45309;
 }
+html.light-theme .cursor-follower span {
+  color: #0F172A;
+}
 
 /* ==========================================================================
    TOUCH DEVICES, MOBILE PHONES, TABLETS, DESKTOPS & 4K TV RESPONSIVENESS
